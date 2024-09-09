@@ -1143,6 +1143,7 @@ footer .border-top {
   display: flex;
   align-items: center;
   background: #000 !important;
+  position: relative;
 }
 
 .swiper-sub-slide-2 img {
@@ -1161,8 +1162,37 @@ footer .border-top {
   left: 0;
 }
 
+.slide-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* 50% opacity */
+  border-radius: 20px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 10px;
+  padding: 5px 10px;
+}
+
+.slider-icons {
+  text-align: -webkit-center !important;
+}
+
+.swiper-wrapper .swiper-slide-thumb-active .icon-svg {
+  display: inline;
+}
+
+.swiper-slide .icon-svg {
+  display: none;
+}
+
 /*End of swiper 2 code*/
 @media only screen and (max-width: 600px) {
+  .swiper-sub-slide-2 img {
+    width: 70% !important;
+  }
   .banner-content-heading h1 {
     font-size: 42px;
   }

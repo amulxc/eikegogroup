@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Modal</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://www.youtube.com/iframe_api"></script>
+   <!-- Link Swiper's CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    /* Fonts*/
+    @font-face {
+      font-family: Articulat CF;
+      src: url(articulat-cf/articulatcf-regular.otf);
+    }
+    @font-face {
+      font-family: SF Pro;
+      src: url(sf-pro/sf-pro-display-regular.otf);
+    }
+    body {
+      font-family: Articulat CF;
+      overflow-x: hidden;
+   }
+   .p-top{
+    padding-top: 80px;
+   }
+   .p-bottom{
+    padding-bottom: 80px;
+   }
+   
+   .secondary-font {
+    font-family: 'SF Pro', sans-serif; /* Same font as primary */
+    font-size: 24px;
+  }
+
+    /* banner CSS */
+    #rental{
+      cursor: pointer;
+      position: relative; 
+      width: 100vw; 
+      height: 100vh;
+      overflow: hidden;
+    }
+    #rental video {
+      object-fit: cover;
+      max-width: 100%;
+      overflow: hidden;
+    }
+    .banner-heading-arrow button{
+      background: transparent;
+      border: none;
+    }
+    .banner-content-heading {
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: max-content;
+    }
+    .banner-content-heading h1{
+      font-size: 72px;
+    }
+    .banner-content {
+      text-align: center;
+      top: 65%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: max-content;
+    }
+    .banner-heading-arrow{
+      text-align: center;
+      top: 85%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: max-content;
+    }
+    .banner-content h4 {
+      font-weight: normal;
+    }
+    .modal {
+      overflow: hidden;
+      width: 100%;
+    }
+    .modal-content {
+      background: transparent;
+      border: none;
+    }
+    .modal-header {
+      border-bottom: none;
+    }
+    .btn-close {
+      opacity: 1;
+      font-size: 30px;
+    }
+
+    .fixed-head {
+      background-color: rgba(0, 0, 0, 0); /* Fully transparent background */
+      position: fixed; /* Keeps the header fixed at the top of the page */
+      top: 0;
+      left: 0;
+      width: 100%; /* Make sure the header spans the entire width */
+      z-index: 1000; /* Ensure the header is above other content */
+    }
+    
+    .header-container {
+      background-color: rgba(0, 0, 0, 0); /* Ensures transparency for the header container */
+    }
+    
+    .navbar {
+      background-color: rgba(0, 0, 0, 0); /* Transparent navbar */
+    }
+
+    .nav-item a{
+      color: #fff;
+      cursor: pointer;
+    }
+    .offcanvas-body button{
+      color: #fff;
+      border: 1px solid #fff;
+    }
+    .fixed-head.scrolled {
+      background-color: white;
+      transition: background-color 0.3s ease;
+    }
+    
+    .fixed-head.scrolled .nav-item a {
+      color: black;
+      transition: color 0.3s ease;
+    }
+
+     /* Header hover effect */
+  .fixed-head:hover {
+    background-color: white; /* Change background color on hover */
+  }
+
+  .fixed-head:hover .nav-item a {
+    color: black; /* Change nav link color on hover */
+  }
+
+  .fixed-head:hover .logo-default {
+    display: none !important; /* Hide the default logo on hover */
+  }
+
+  .fixed-head:hover .logo-black {
+    display: block !important; /* Show the black logo on hover */
+  }
+
+  .fixed-head:hover .offcanvas-body .btn {
+    color: black; /* Change button text color on hover */
+    border-color: black; /* Change button border color on hover */
+  }
+
+
+    /* Hamburger icon code */
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+    .fixed-head.scrolled .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+    .fixed-head:hover .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+
+  /* Default button styles */
+    .offcanvas-body .btn {
+      color: #fff;
+      border: 1px solid #fff;
+    }
+
+    /* Button styles when scrolled */
+    .offcanvas-body .btn.scrolled {
+      color: black;
+      border: 1px solid black;
+    }
+
+    /* Hide the black logo and show the default logo initially */
+    .logo-default {
+      display: block;
+    }
+
+    .logo-black {
+      display: none;
+    }
+
+    /* When scrolled, hide the default logo and show the black logo */
+    .scrolled .logo-default {
+      display: none;
+    }
+
+    .scrolled .logo-black {
+      display: block;
+    }
+    
+    .nav-item a {
+      color: #fff;
+      cursor: pointer;
+      position: relative;
+      text-decoration: none;
+    }
+    
+    .nav-item a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 2px;
+      background-color: black;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+    
+    .nav-item a:hover::after {
+      transform: scaleX(1);
+    }
+    
+    .fixed-head.scrolled .nav-item a {
+      color: black;
+    }
+    
+    .fixed-head:hover .nav-item a {
+      color: black;
+    }
+
+    /*Swiper-1 code*/
+
+    .swiper-slide-1 {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      user-select: none;
+      max-width: 572px;
+      max-height: 300px;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s ease, filter 0.5s ease; /* Smooth transition for transform and filter */
+    }
+    .swiper-1{
+      margin-left: -80px;
+    }
+
+    .swiper-slide-active-1 {
+      transform: scale(1.1); /* Slightly scale up the active slide */
+      filter: brightness(1); /* Normal brightness for the active slide */
+      width: 540px !important;
+    }
+    
+    .swiper-slide-next-1,
+    .swiper-slide-prev-1 {
+      filter: brightness(0.6); /* Darken the non-active slides */
+      background: rgba(0, 0, 0, 0.5); /* Dark gradient effect */
+    }
+    
+    .swiper-slide-prev-1 {
+      background: rgba(0, 0, 0, 0.5); /* Dark gradient effect for the previous slide */
+    }
+    
+    .swiper-slide-next-1 {
+      background: rgba(0, 0, 0, 0.5); /* Dark gradient effect for the next slide */
+    }
+    
+    .swiper-slide-active-1.swiper-slide-next-1,
+    .swiper-slide-active-1.swiper-slide-prev-1 {
+      background: none; /* Remove gradient from the active slide */
+    }
+    .swiper-caption p {
+      opacity: 0;
+      transform: translateX(-20px); /* Start position: off-screen to the left */
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .swiper-caption{
+      padding-left: 80px;
+    }
+  
+    .swiper-caption p.visible {
+      opacity: 1;
+      transform: translateX(0); /* End position: centered */
+    }
+    .swiper-paginaton1{
+      padding-left: 80px !important;
+    }
+
+    .swiper-1 .swiper-button-prev {
+      background: #fff;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      padding: 40px;
+      color: #000;
+
+  }
+  .swiper-button-1-prev{
+    margin-left: 80px;  
+    top: 40%;
+  }
+  .swiper-button-1-next{
+    top: 40%;
+  }
+    .swiper-1 .swiper-button-prev:after {
+    font-size: 26px;
+  }
+
+  .swiper-button-next:after {
+    font-size: 26px;
+ }
+
+  .swiper-button-next {
+    background: #fff;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    padding: 40px;
+    color: #000;  
+  }
+  .swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    opacity: 1;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    transition: all 0.6s ease-in-out;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 32px;
+    background-color: #fff;
+    border-radius: 14px;
+  }
+  .swiper-1 .swiper-pagination{
+    position: relative !important;
+    bottom: -18px !important;
+  }
+  #grad1 {
+    background: rgb(19,25,121);
+    background: linear-gradient(90deg, rgba(19,25,121,1) 0%, rgba(2,5,34,1) 24%);
+  }    
+
+  /*End of swiper-1 code*/
+
+  /*Swiper 2 code*/
+  .mySwiper-2 {
+    width: 100%;
+  }
+
+  .swiper-2 {
+    height: 170px;
+    box-sizing: border-box;
+    background: #000;
+    opacity: 0.8;
+    z-index: 9;
+  }
+
+  .swiper-2 .swiper-slide {
+    width: 25% !important;
+    height: 100%;
+  }
+
+  .swiper-2 .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+
+  .swiper-sub-slide-2 img, .swiper-slide-2 img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+  .swiper-sub-slide-2{
+    margin: 0px !important;
+    display: flex;
+    align-items: center;
+  }
+  .swiper-sub-slide-2 img{
+    width: 55%;
+  }
+  .container-1{
+    position: relative;
+    & .pos-absolute{position: absolute; bottom: 0;}
+  }
+  /*End of swiper 2 code*/
+
+    @media only screen and (max-width: 600px) {
+      .banner-content-heading h1{
+        font-size: 42px;
+      }
+      .banner-content{
+        top: 60%;
+      }
+      .banner-heading-arrow{
+        top: 75%;
+      }
+      .nav-item a{
+        color: #000;
+      }
+      .offcanvas-body button{
+        color: #000;
+        border: 1px solid #000;
+      }
+      .swiper-1 .swiper-button-prev {
+        padding: 30px;
+      }
+      .swiper-button-next {
+        padding: 30px;
+      }
+      .nav-item a {
+        color: #000;
+      }
+      .swiper-slide-1{
+        max-height: 500px;
+      }
+      .swiper-2{
+        height: 100px;
+      }
+      .p-top{
+        padding-top: 40px;
+       }
+       .p-bottom{
+        padding-bottom: 40px;
+       }
+    }
+    @media only screen and (min-width: 600px) {
+      .mySwiper-2 {
+        height: 800px;
+      }
+    }
+  </style>
+</head>
+<body>
+<!-- Header -->
+<!-- Updated Header -->
+<div class="overflow-hidden fixed-head">
+  <div class="container-xxl">
+    <nav class="navbar navbar-expand-lg justify-content-center" style="height: 80px;">
+      <div class="header-container d-flex align-items-center w-100 px-3 justify-content-between">
+        <div class="d-lg-block d-sm-none">
+          <a href="/" class="logo-default"> <img src="images\ebikego-logo2.png" alt="" width="100px"> </a>
+          <a href="/" class="logo-black"> <img src="images\ebikego-logo-black.png" alt="" width="100px"></a>
+        </div>
+        <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- side bar -->
+        <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <div>
+              <a href="/" class=""> <img src="images\ebikego-logo-black.png" alt="" width="100px"></a>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body" style="text-align: initial;">
+            <ul class="navbar-nav flex-grow-1 justify-content-center gap-lg-5">
+              <li class="nav-item">
+                <a class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Product</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link">careers</a>
+              </li>
+              <li class="nav-item d-lg-none">
+                <a class="nav-link">Contact</a>
+              </li>
+            </ul>
+            <div class="">
+              <button class="btn d-lg-block d-none" type="submit">Contact Us</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+<!-- Banner -->
+<!-- Modal YouTube Video -->
+<div class="modal fade modal-xl modal-dialog-scrollable" id="modelimg" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <!-- Video Embed -->
+        <iframe id="youtubeVideo" width="100%" height="480" src="https://www.youtube.com/embed/wQ-e739kURM?si=ZwM4O2Remd7b7W6e&amp;" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="rental">
+  <video id="videoElement" autoplay muted loop width="100%" height="100%">
+    <source src="video/ebikego-video.webm" type="video/mp4">
+  </video>
+  <div>
+    <div class="position-absolute banner-content-heading">
+      <h1 class="text-white">Create impact and Inspire change</h1>
+    </div>
+    <div class="d-flex gap-3 justify-content-center text-white position-absolute banner-content align-items-center" data-bs-toggle="modal" data-bs-target="#modelimg">
+      <img src="images/play.png" width="5%">
+      <h4 class="m-0 secondary-font">Play Full Video</h4>
+    </div>
+    <div class="position-absolute banner-heading-arrow">
+      <a href="#grad1"><button><img src="images/down-arrow.png" width="6%"></button></a>
+    </div>
+  </div>
+  <div>
+    <img src="images/play.png" height="6%" id="playButton" style="position: absolute; bottom: 10px; right: 25px; cursor: pointer;">
+    <img src="images/pause.png" height="6%" id="pauseButton" style="position: absolute; bottom: 10px; right: 25px; cursor: pointer; display: none;">
+  </div>
+</div>
+<!-- Swiper 1 code -->
+<section id="grad1" class="p-bottom p-top">
+  <div class="">
+    <div class="text-center mb-5">
+      <h1 class="text-white">Who We Are</h1>
+    </div>
+    <div>
+      <!-- Swiper -->
+      <div class="swiper mySwiper swiper-1">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide swiper-slide-1" data-caption="We bring together some of the most impactful brands that redefine standards and set new benchmarks."><img src="images/swipe1.png"></div>
+          <div class="swiper-slide swiper-slide-1" data-caption="We are dedicated to improving lives and safeguarding the planet."><img src="images/swipe2.png"></div>
+          <div class="swiper-slide swiper-slide-1" data-caption="We are a visionary conglomerate driving innovation across diverse industries."><img src="images/swipe3.png"></div>
+          <div class="swiper-slide swiper-slide-1" data-caption="We are committed to transforming sectors with cutting-edge solutions and sustainable practices."><img src="images/swipe4.png"></div>
+        </div>
+        <div class="swiper-button-next swiper-button-1-next"></div>
+        <div class="swiper-button-prev swiper-button-1-prev"></div>
+        <!-- Caption -->
+        <div class="swiper-caption text-center mt-3 text-white">
+          <p id="slider-caption" class="secondary-font mt-5"></p>
+        </div>
+        <div class="swiper-pagination p-2 swiper-paginaton1 mb-5"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Swiper 2 code -->
+<section class="swiper-1">
+  <div class="container-1">
+  <!-- Swiper -->
+    <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper-2">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide swiper-slide-2">
+        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+      </div>
+      <div class="swiper-slide swiper-slide-2">
+        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+      </div>
+      <div class="swiper-slide swiper-slide-2">
+        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+      </div>
+      <div class="swiper-slide swiper-slide-2">
+        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+      </div>
+      <div class="swiper-slide swiper-slide-2">
+        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+      </div>
+      <div class="swiper-slide swiper-slide-2">
+        <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+      </div>
+      <div class="swiper-slide swiper-slide-2">
+        <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+      </div>
+      <div class="swiper-slide swiper-slide-2">
+        <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+      </div>
+      <div class="swiper-slide swiper-slide-2">
+        <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+      </div>
+      <div class="swiper-slide swiper-slide-2">
+        <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+      </div>
+    </div>
+    <div class="swiper-button-next swiper-button-1-next"></div>
+    <div class="swiper-button-prev swiper-button-1-prev"></div>
+    </div>
+    <div thumbsSlider="" class="swiper swiper-2 pos-absolute">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide swiper-sub-slide-2">
+          <img src="images\logo1.png" />
+        </div>
+        <div class="swiper-slide swiper-sub-slide-2">
+          <img src="images\logo2.png" />
+        </div>
+        <div class="swiper-slide swiper-sub-slide-2">
+          <img src="images\logo3.png" />
+        </div>
+        <div class="swiper-slide swiper-sub-slide-2">
+          <img src="images\ebikego-logo-black.png" />
+        </div>
+        <div class="swiper-slide swiper-sub-slide-2">
+          <img src="images\ebikego-logo2.png" />
+        </div>
+        <div class="swiper-slide swiper-sub-slide-2">
+          <img src="images\ebikego-logo-black.png" />
+        </div>
+        <div class="swiper-slide swiper-sub-slide-2">
+          <img src="images\ebikego-logo2.png" />
+        </div>
+        <div class="swiper-slide swiper-sub-slide-2">
+          <img src="images\ebikego-logo-black.png" />
+        </div>
+        <div class="swiper-slide swiper-sub-slide-2">
+          <img src="images\ebikego-logo2.png" />
+        </div>
+        <div class="swiper-slide swiper-sub-slide-2">
+          <img src="images\ebikego-logo-black.png" />
+        </div>
+      </div>
+    </div>
+</div>
+</section>
+
+          
+  <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>  
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var swiper = new Swiper('.swiper-1', {
+        spaceBetween: 30,
+        loop: true,
+        centeredSlides: true,
+        pagination: {
+          el: '.swiper-1 .swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-1 .swiper-button-next',
+          prevEl: '.swiper-1 .swiper-button-prev',
+        },
+        breakpoints: {
+          // When window width is <= 768px
+          768: {
+            slidesPerView: 1,
+          },
+          // When window width is > 768px
+          769: {
+            slidesPerView: 3,
+          }
+        },
+        on: {
+          init: function () {
+            updateSlideStyles(this);
+            updateCaption(this);
+          },
+          slideChange: function () {
+            updateSlideStyles(this);
+            updateCaption(this);
+          },
+          slideChangeTransitionEnd: function () {
+            updateSlideStyles(this);
+          },
+        },
+      });
+    
+      function updateSlideStyles(swiper) {
+        const slides = swiper.slides;
+        slides.forEach((slide) => {
+          slide.classList.remove('swiper-slide-active-1', 'swiper-slide-prev-1', 'swiper-slide-next-1');
+        });
+    
+        // Add appropriate classes to slides
+        const activeSlide = swiper.slides[swiper.activeIndex];
+        const prevSlide = swiper.slides[swiper.activeIndex - 1] || swiper.slides[swiper.slides.length - 1];
+        const nextSlide = swiper.slides[swiper.activeIndex + 1] || swiper.slides[0];
+    
+        activeSlide.classList.add('swiper-slide-active-1');
+        prevSlide.classList.add('swiper-slide-prev-1-1');
+        nextSlide.classList.add('swiper-slide-next-1');
+      }
+    
+      function updateCaption(swiper) {
+        var activeSlide = swiper.slides[swiper.activeIndex];
+        var captionText = activeSlide.getAttribute('data-caption');
+        var captionElement = document.getElementById('slider-caption');
+    
+        if (captionElement) {
+          captionElement.classList.remove('visible');
+          setTimeout(function () {
+            captionElement.textContent = captionText;
+            captionElement.classList.add('visible');
+          }, 300); // Adjust the timeout duration to match the transition speed
+        }
+      }
+    });
+    
+  </script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".swiper-2", {
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var swiper_2 = new Swiper(".mySwiper-2", {
+        loop: true,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".mySwiper-2 .swiper-button-next",
+          prevEl: ".mySwiper-2 .swiper-button-prev",
+        },
+        thumbs: {
+          swiper: swiper,
+        },
+      });
+    </script>
+  
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Carousel functionality
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const buttons = document.querySelectorAll('.carousel-button');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.transform = `translateX(-${index * 300}px)`;
+        buttons[i].classList.toggle('active', i === index);
+      });
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    }
+
+    buttons.forEach((button, index) => {
+      button.addEventListener('click', () => {
+        currentIndex = index;
+        showSlide(currentIndex);
+      });
+    });
+
+    setInterval(nextSlide, 3000); // Change slide every 3 seconds
+
+    // Initialize carousel
+    showSlide(currentIndex);
+
+    // Video play/pause buttons
+    const video = document.getElementById('videoElement');
+    const playButton = document.getElementById('playButton');
+    const pauseButton = document.getElementById('pauseButton');
+
+    function updateButtonVisibility() {
+      if (video.paused) {
+        playButton.style.display = 'block';
+        pauseButton.style.display = 'none';
+      } else {
+        playButton.style.display = 'none';
+        pauseButton.style.display = 'block';
+      }
+    }
+
+    playButton.addEventListener('click', () => {
+      video.play();
+      updateButtonVisibility();
+    });
+
+    pauseButton.addEventListener('click', () => {
+      video.pause();
+      updateButtonVisibility();
+    });
+
+    video.addEventListener('play', updateButtonVisibility);
+    video.addEventListener('pause', updateButtonVisibility);
+
+    // Initialize button visibility based on video state
+    updateButtonVisibility();
+
+    // Header, button styles, and toggler icon color on scroll
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('.fixed-head');
+      const button = document.querySelector('.btn');
+      const togglerIcon = document.querySelector('.navbar-toggler-icon');
+      const logos = {
+        default: document.querySelector('.logo-default'),
+        black: document.querySelector('.logo-black')
+      };
+
+      if (window.scrollY > 50) { // Change '50' to the scroll value you prefer
+        header.classList.add('scrolled');
+        button.classList.add('scrolled');
+        if (togglerIcon) {
+          togglerIcon.classList.add('scrolled');
+        }
+        if (logos.default) {
+          logos.default.style.display = 'none';
+        }
+        if (logos.black) {
+          logos.black.style.display = 'block';
+        }
+      } else {
+        header.classList.remove('scrolled');
+        button.classList.remove('scrolled');
+        if (togglerIcon) {
+          togglerIcon.classList.remove('scrolled');
+        }
+        if (logos.default) {
+          logos.default.style.display = 'block';
+        }
+        if (logos.black) {
+          logos.black.style.display = 'none';
+        }
+      }
+    });
+  });
+</script>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<!-- youtube video autoplay code -->
+<script>
+  $(document).ready(function() {
+    var videoPlayer = document.getElementById('youtubeVideo');
+    var originalSrc = videoPlayer.getAttribute('src');
+    $('#modelimg').on('shown.bs.modal', function() {
+      // Update src to autoplay the video with sound
+      videoPlayer.src = originalSrc + '&autoplay=1' + '&mute=0';
+    });
+    $('#modelimg').on('hidden.bs.modal', function() {
+      // Reset src to stop autoplay and mute the sound
+      videoPlayer.src = originalSrc;
+      videoPlayer.muted = true;
+    });
+  });
+</script>
+<script>
+  // JavaScript for changing the header background on scroll
+window.addEventListener('scroll', function() {
+  var header = document.querySelector('.fixed-head');
+  var navLinks = document.querySelectorAll('.nav-item a');
+
+  if (window.scrollY > 50) { // Change '50' to the scroll value you prefer
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+</script>
+</body>
+</html>

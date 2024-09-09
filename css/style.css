@@ -701,7 +701,7 @@ footer .border-top {
 }
 
 .double-slider .swiper-button-next, .double-slider .swiper-button-prev {
-  bottom: 50px;
+  bottom: 30px;
   position: absolute;
   top: auto;
   left: auto;
@@ -831,10 +831,15 @@ footer .border-top {
 }
 
 #rental video {
+  overflow: hidden;
   -o-object-fit: cover;
      object-fit: cover;
-  max-width: 100%;
-  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .banner-heading-arrow button {
@@ -1190,8 +1195,11 @@ footer .border-top {
 
 /*End of swiper 2 code*/
 @media only screen and (max-width: 600px) {
+  .swiper-slide-2 img {
+    height: 600px;
+  }
   .swiper-sub-slide-2 img {
-    width: 70% !important;
+    width: 65% !important;
   }
   .banner-content-heading h1 {
     font-size: 42px;

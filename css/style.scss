@@ -435,7 +435,7 @@ width: 52px !important;
 }
 .double-slider {
   .swiper-button-next,.swiper-button-prev{
-    bottom: 50px;
+    bottom: 30px;
     position: absolute;
     top: auto;
     left: auto;
@@ -587,9 +587,14 @@ z-index: -1;
     overflow: hidden;
   }
   #rental video {
-    object-fit: cover;
-    max-width: 100%;
     overflow: hidden;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
   }
   .banner-heading-arrow button{
     background: transparent;
@@ -916,13 +921,14 @@ z-index: -1;
 .swiper-slide .icon-svg {
   opacity: 0;
 }
-
 /*End of swiper 2 code*/
 
   @media only screen and (max-width: 600px) {
-
+    .swiper-slide-2 img{
+      height: 600px;
+    }
     .swiper-sub-slide-2 img{
-      width: 70% !important;
+      width: 65% !important;
     }
     .banner-content-heading h1{
       font-size: 42px;

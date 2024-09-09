@@ -1,434 +1,685 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ebikego Group</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="/css/style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!doctype html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Ebikego Group</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+      <link rel="stylesheet" href="/css/style.css">
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  </head>
-  <body>
- 
-    <!-- Updated Header -->
-     <header>
-<div class="overflow-hidden fixed-head">
-    <section class="container-fluid p-0">
-      <nav class="navbar navbar-expand-lg justify-content-center" style="height: 80px;">
-        <div class="header-container d-flex align-items-center w-100 justify-content-between p-left p-right">
-          <div class="d-lg-block d-sm-none">
-            <a href="/" class="logo-default"> <img src="images/ebgwhite.png" alt="" width="100px"> </a>
-            <a href="/" class="logo-black"> <img src="images/ebg-b.png" alt="" width="100px"></a>
-          </div>
-          <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="menu">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <!-- side bar -->
-          <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <div>
-                <a href="/" class=""> <img src="images\ebg-b.png" alt="" width="100px"></a>
-              </div>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body" style="text-align: initial;">
-              <ul class="navbar-nav flex-grow-1 justify-content-center gap-lg-5">
-                <li class="nav-item">
-                  <a class="nav-link " href="who-we-are.html">Who we are</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link " href="brands.html">Brands</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link " href="governance.html">Governance </a>
-                </li> 
-                <li class="nav-item">
-                  <a class="nav-link " href="careers.html">Careers</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link " href="investors.html">Investors</a>
-                </li>
-                <li class="nav-item d-lg-none">
-                  <a class="nav-link " href="contact.html">Contact</a>
-                </li>
-              </ul>
-              <div class="">
-                <button class="btn d-lg-block d-none br-0" type="submit" onclick="location.href='/contact.html'">Contact Us</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </section>
-  </div>
-</header>
-  <!-- Banner -->
-  <!-- Modal YouTube Video -->
-  <div class="modal fade modal-xl modal-dialog-scrollable" id="modelimg" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body text-center">
-          <!-- Video Embed -->
-          <iframe id="youtubeVideo" width="100%" height="480" src="https://www.youtube.com/embed/wQ-e739kURM?si=ZwM4O2Remd7b7W6e&amp;" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
+    </head>
+    <body>
   
-  <div id="rental">
-    <video id="videoElement" autoplay muted loop width="100%" height="100%">
-      <source src="video/ebikego-video.webm" type="video/mp4" >
-    </video>
-    <div >
-      <div class="position-absolute banner-content-heading w-100">
-        <h1 class="text-white" >Create impact and Inspire change</h1>
-        <div class="d-lg-none d-block  pb-5"></div>
-      </div>
-      <div class="d-flex gap-3 justify-content-center text-white position-absolute banner-content align-items-center" data-bs-toggle="modal" data-bs-target="#modelimg">
-        <img src="images/play.png" width="5%">
-        <!-- <div class="d-lg-none d-block pt-5"> </div> -->
-        <h4 class="m-0 secondary-font">Play Full Video</h4>
-      </div>
-      <div class="position-absolute banner-heading-arrow">
-        <a href="#who-we-are"><button><img src="images/down-arrow.png" width="6%"></button></a>
+      <!-- Updated Header -->
+      <header>
+  <div class="overflow-hidden fixed-head">
+      <section class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg justify-content-center" style="height: 80px;">
+          <div class="header-container d-flex align-items-center w-100 justify-content-between p-left p-right">
+            <div class="d-lg-block d-sm-none">
+              <a href="/" class="logo-default"> <img src="images/ebgwhite.png" alt="" width="100px"> </a>
+              <a href="/" class="logo-black"> <img src="images/ebg-b.png" alt="" width="100px"></a>
+            </div>
+            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="menu">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- side bar -->
+            <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <div>
+                  <a href="/" class=""> <img src="images\ebg-b.png" alt="" width="100px"></a>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body" style="text-align: initial;">
+                <ul class="navbar-nav flex-grow-1 justify-content-center gap-lg-5">
+                  <li class="nav-item">
+                    <a class="nav-link " href="who-we-are.html">Who we are</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="brands.html">Brands</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="governance.html">Governance </a>
+                  </li> 
+                  <li class="nav-item">
+                    <a class="nav-link " href="careers.html">Careers</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="investors.html">Investors</a>
+                  </li>
+                  <li class="nav-item d-lg-none">
+                    <a class="nav-link " href="contact.html">Contact</a>
+                  </li>
+                </ul>
+                <div class="">
+                  <button class="btn d-lg-block d-none br-0" type="submit" onclick="location.href='/contact.html'">Contact Us</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </section>
+    </div>
+  </header>
+    <!-- Banner -->
+    <!-- Modal YouTube Video -->
+    <div class="modal fade modal-xl modal-dialog-scrollable" id="modelimg" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <!-- Video Embed -->
+            <iframe id="youtubeVideo" width="100%" height="480" src="https://www.youtube.com/embed/wQ-e739kURM?si=ZwM4O2Remd7b7W6e&amp;" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
       </div>
     </div>
-    <div>
-      <img src="images/play.png" height="6%" id="playButton" style="position: absolute; bottom: 10px; right: 25px; cursor: pointer;">
-      <img src="images/pause.png" height="6%" id="pauseButton" style="position: absolute; bottom: 10px; right: 25px; cursor: pointer; display: none;">
-    </div>
-  </div>
-
-
-  <!-- sec2 -->
-   
-
-<section class="container p-top p-bottom">
-  <div class="row justify-content-center text-center">
-    <div class="col-lg-9 col-12">
-      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 jkLJmU" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25"></circle></svg>
-      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 jkLJmU" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25"></circle></svg>
-      <h1 class="sf-light pt-4"  data-aos="fade-up">
-        Global innovator shaping the future of sustainable industries.
-      </h1>
-    </div>
-  </div>
-  
-</section>
-  <!-- Swiper 1 code -->
-  <!-- <section id="grad1" class="p-bottom p-top container-fluid">
-    <div class="">
-      <div class="text-center mb-5">
-        <h2 class="text-white">Who We Are</h2>
+    
+    <div id="rental">
+      <video id="videoElement" autoplay muted loop width="100%" height="100%">
+        <source src="video/ebikego-video.webm" type="video/mp4" >
+      </video>
+      <div >
+        <div class="position-absolute banner-content-heading w-100">
+          <h1 class="text-white" >Create impact and Inspire change</h1>
+          <div class="d-lg-none d-block  pb-5"></div>
+        </div>
+        <div class="d-flex gap-3 justify-content-center text-white position-absolute banner-content align-items-center" data-bs-toggle="modal" data-bs-target="#modelimg">
+          <img src="images/play.png" width="5%">
+          <!-- <div class="d-lg-none d-block pt-5"> </div> -->
+          <h4 class="m-0 secondary-font">Play Full Video</h4>
+        </div>
+        <div class="position-absolute banner-heading-arrow">
+          <a href="#who-we-are"><button><img src="images/down-arrow.png" width="6%"></button></a>
+        </div>
       </div>
       <div>
+        <img src="images/play.png" height="6%" id="playButton" style="position: absolute; bottom: 10px; right: 25px; cursor: pointer;">
+        <img src="images/pause.png" height="6%" id="pauseButton" style="position: absolute; bottom: 10px; right: 25px; cursor: pointer; display: none;">
+      </div>
+    </div>
 
-        <div class="swiper mySwiper swiper-1">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide swiper-slide-1" data-caption="We bring together some of the most impactful brands that redefine standards and set new benchmarks."><img src="images/swipe1.png"></div>
-            <div class="swiper-slide swiper-slide-1" data-caption="We are dedicated to improving lives and safeguarding the planet."><img src="images/swipe2.png"></div>
-            <div class="swiper-slide swiper-slide-1" data-caption="We are a visionary conglomerate driving innovation across diverse industries."><img src="images/swipe3.png"></div>
-            <div class="swiper-slide swiper-slide-1" data-caption="We are committed to transforming sectors with cutting-edge solutions and sustainable practices."><img src="images/swipe4.png"></div>
-          </div>
-          <div class="swiper-button-prev">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15.768" height="13.479" viewBox="0 0 15.768 13.479" class="Icon__SVG-sc-fa06b592-0 jkLJmU" style="width: 31.5px; height: auto;"><path id="i_arrow-left" d="M19.768,11.728a.586.586,0,0,1-.6.563H5.916l4.922,5.273a.545.545,0,0,1-.422.914.473.473,0,0,1-.422-.176L4.158,12.115a.51.51,0,0,1,0-.738L9.994,5.189a.563.563,0,0,1,.809-.035.524.524,0,0,1,.035.774L5.916,11.166H19.17a.611.611,0,0,1,.6.562Z" transform="translate(-4 -5)"></path></svg>
-          </div>
-          <div class="swiper-button-next">
-            <svg fill="black" xmlns="http://www.w3.org/2000/svg" width="15.768" height="13.479" viewBox="0 0 15.768 13.479" class="Icon__SVG-sc-fa06b592-0 fSWvFY" style="width: 31.5px; height: auto;"><path id="i_arrow-right" d="M19.768,11.728a.586.586,0,0,1-.6.563H5.916l4.922,5.273a.545.545,0,0,1-.422.914.473.473,0,0,1-.422-.176L4.158,12.115a.51.51,0,0,1,0-.738L9.994,5.189a.563.563,0,0,1,.809-.035.524.524,0,0,1,.035.774L5.916,11.166H19.17a.611.611,0,0,1,.6.562Z" transform="translate(-4 -5)" fill="black"></path></svg>
-          </div>
-         
-          <div class="swiper-caption text-center mt-3 text-white">
-            <p id="slider-caption" class="secondary-font mt-5"></p>
-          </div>
-          <div class="swiper-pagination p-2 swiper-paginaton1 mb-5">
-            
+
+    <!-- sec2 -->
+    
+
+  <section class="container p-top p-bottom bg-light">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-9 col-12">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 jkLJmU" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25"></circle></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 jkLJmU" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25"></circle></svg>
+        <h1 class="sf-light pt-4"  data-aos="fade-up">
+          Global innovator shaping the future of sustainable industries.
+        </h1>
+      </div>
+    </div>
+    
+  </section>
+    <!-- Swiper 1 code -->
+    <!-- <section id="grad1" class="p-bottom p-top container-fluid">
+      <div class="">
+        <div class="text-center mb-5">
+          <h2 class="text-white">Who We Are</h2>
+        </div>
+        <div>
+
+          <div class="swiper mySwiper swiper-1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide swiper-slide-1" data-caption="We bring together some of the most impactful brands that redefine standards and set new benchmarks."><img src="images/swipe1.png"></div>
+              <div class="swiper-slide swiper-slide-1" data-caption="We are dedicated to improving lives and safeguarding the planet."><img src="images/swipe2.png"></div>
+              <div class="swiper-slide swiper-slide-1" data-caption="We are a visionary conglomerate driving innovation across diverse industries."><img src="images/swipe3.png"></div>
+              <div class="swiper-slide swiper-slide-1" data-caption="We are committed to transforming sectors with cutting-edge solutions and sustainable practices."><img src="images/swipe4.png"></div>
+            </div>
+            <div class="swiper-button-prev">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15.768" height="13.479" viewBox="0 0 15.768 13.479" class="Icon__SVG-sc-fa06b592-0 jkLJmU" style="width: 31.5px; height: auto;"><path id="i_arrow-left" d="M19.768,11.728a.586.586,0,0,1-.6.563H5.916l4.922,5.273a.545.545,0,0,1-.422.914.473.473,0,0,1-.422-.176L4.158,12.115a.51.51,0,0,1,0-.738L9.994,5.189a.563.563,0,0,1,.809-.035.524.524,0,0,1,.035.774L5.916,11.166H19.17a.611.611,0,0,1,.6.562Z" transform="translate(-4 -5)"></path></svg>
+            </div>
+            <div class="swiper-button-next">
+              <svg fill="black" xmlns="http://www.w3.org/2000/svg" width="15.768" height="13.479" viewBox="0 0 15.768 13.479" class="Icon__SVG-sc-fa06b592-0 fSWvFY" style="width: 31.5px; height: auto;"><path id="i_arrow-right" d="M19.768,11.728a.586.586,0,0,1-.6.563H5.916l4.922,5.273a.545.545,0,0,1-.422.914.473.473,0,0,1-.422-.176L4.158,12.115a.51.51,0,0,1,0-.738L9.994,5.189a.563.563,0,0,1,.809-.035.524.524,0,0,1,.035.774L5.916,11.166H19.17a.611.611,0,0,1,.6.562Z" transform="translate(-4 -5)" fill="black"></path></svg>
+            </div>
+          
+            <div class="swiper-caption text-center mt-3 text-white">
+              <p id="slider-caption" class="secondary-font mt-5"></p>
+            </div>
+            <div class="swiper-pagination p-2 swiper-paginaton1 mb-5">
+              
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section> -->
-
-<section id="who-we-are" class="grad-blue p-top p-bottom container-fluid bg-light">
-  <div class="row">
-    <div class="text-center mb-5">
-      <h2 class="text-white"  data-aos="fade-up">Who We Are</h2>
-    </div>
-  <div class="swiper who-we-are-swiper">
-    <div class="swiper-wrapper text-white">
-      <div class="swiper-slide">
-        <div class="d-flex flex-column gap-4">
-        <img src="images/wearevisionnaty.png">
-        <div class="position-relative">
-        <p class="sf-light big-p pb-4">We are a visionary conglomerate driving innovation across diverse industries.</p>
-      </div>
-      </div>
-      </div>
-      <div class="swiper-slide ">
-        <div class="d-flex flex-column gap-4">
-          <img src="images/wearecommitte.png">
-          <div class="position-relative">
-        <p class="sf-light big-p pb-4">We are committed to transforming sectors with cutting-edge solutions and sustainable practices.</p>
-            </div>
-      </div>
-      </div>
-      <div class="swiper-slide">
-        <div class=" d-flex flex-column gap-4">
-        <img src="images/webringtogether.png">
-        <div class="position-relative">
-
-        <p class="sf-light big-p pb-4">We bring together some of the most impactful brands that redefine standards and set new benchmarks.</p>
-          </div>
-          </div>
-      </div>
-      <div class="swiper-slide ">
-        <div class="d-flex flex-column gap-4">
-        <img src="images/wearededicated.png">
-        <div class="position-relative">
-        <p class="sf-light big-p pb-4">We are dedicated to improving lives and safeguarding the planet.</p>
-          </div>
-          </div>
-      </div>
-      
-    </div>
-    <div class="d-lg-block d-md-block d-none">
-      <div class="swiper-button-prev">
-        <svg xmlns="http://www.w3.org/2000/svg" width="15.768" height="13.479" viewBox="0 0 15.768 13.479" class="Icon__SVG-sc-fa06b592-0 jkLJmU" style="width: 31.5px; height: auto;"><path id="i_arrow-left" d="M19.768,11.728a.586.586,0,0,1-.6.563H5.916l4.922,5.273a.545.545,0,0,1-.422.914.473.473,0,0,1-.422-.176L4.158,12.115a.51.51,0,0,1,0-.738L9.994,5.189a.563.563,0,0,1,.809-.035.524.524,0,0,1,.035.774L5.916,11.166H19.17a.611.611,0,0,1,.6.562Z" transform="translate(-4 -5)"></path></svg>
-      </div>
-      <div class="swiper-button-next">
-        <svg fill="black" xmlns="http://www.w3.org/2000/svg" width="15.768" height="13.479" viewBox="0 0 15.768 13.479" class="Icon__SVG-sc-fa06b592-0 fSWvFY" style="width: 31.5px; height: auto;"><path id="i_arrow-right" d="M19.768,11.728a.586.586,0,0,1-.6.563H5.916l4.922,5.273a.545.545,0,0,1-.422.914.473.473,0,0,1-.422-.176L4.158,12.115a.51.51,0,0,1,0-.738L9.994,5.189a.563.563,0,0,1,.809-.035.524.524,0,0,1,.035.774L5.916,11.166H19.17a.611.611,0,0,1,.6.562Z" transform="translate(-4 -5)" fill="black"></path></svg>
-      </div>
-    </div>
-    <div class="swiper-pagination"></div>
-    
-  </div>
-  </div>
-</section>
-  
-  
-
-
-
-  
-
-    <!-- <section class="container-fluid p-top p-left">
-        <h2 >Stories</h2>
-        <div class="d-flex flex-lg-row flex-column justify-content-between">
-        <p class="w-lg-60 py-3  sf-light">Every day, at eBikeGo, we explore new paths to revolutionize urban mobility and empower sustainable travel. Discover our journey towards a cleaner, greener future through our stories.</p>
-        <a href="#" class="text-black  sf-light f-16 pb-4">View all stories <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="white"><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z" fill="black"></path></svg></a></div>
-
-
-         <div class="row story-slider">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide"  data-aos="fade-up"   data-aos-duration="500">
-                    <div class="col-12">
-                        <div class="position-relative w-100">
-                        <img src="https://media.essilorluxottica.com/cms/caas/v1/media/204504/data/picture/3bdf9d36f3ac11bddf56b073a7648868.png" alt="" class="w-100 h-100">
-                        <div class="position-absolute bottom-0 text-white text bg-blur w-100 text-start">
-                            <div class="bg-blur bg-black-3  w-100 h-100  py-4 px-4">
-                            <p class="sf-light o-8">26 AUG 2024</p>
-                            <h4>Ashish Vidyarthi Joins forces with WHILL to transform India’s personal mobility ...</h4>
-                           <a href="#" class="text-white sf-light o-8">Read More <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="white"><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z" fill="white"></path></svg></a>
-                        </div>
-                    </div>
-                    </div>
-                 </div>
-                  </div>
-                  <div class="swiper-slide"  data-aos="fade-up"   data-aos-duration="900">
-                    <div class="col-12">
-                        <div class="position-relative w-100">
-                        <img src="https://media.essilorluxottica.com/cms/caas/v1/media/204504/data/picture/3bdf9d36f3ac11bddf56b073a7648868.png" alt="" class="w-100 h-100">
-                        <div class="position-absolute bottom-0 text-white text bg-blur w-100 text-start">
-                            <div class="bg-blur bg-black-3  w-100 h-100  py-4 px-4">
-                            <p class="sf-light o-8">26 AUG 2024</p>
-                            <h4>eBikeGo Welcomes Union Budget 2024: Driving India Towards a Sustainable EV Future</h4>
-                           <a href="#" class="text-white sf-light o-8">Read More <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="white"><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z" fill="white"></path></svg></a>
-                        </div>
-                    </div>
-                    </div>
-                 </div>
-                  </div>
-                  <div class="swiper-slide"  data-aos="fade-up"   data-aos-duration="1200">
-                    <div class="col-12">
-                        <div class="position-relative w-100">
-                        <img src="https://media.essilorluxottica.com/cms/caas/v1/media/204504/data/picture/3bdf9d36f3ac11bddf56b073a7648868.png" alt="" class="w-100 h-100">
-                        <div class="position-absolute bottom-0 text-white text bg-blur w-100 text-start">
-                            <div class="bg-blur bg-black-3  w-100 h-100  py-4 px-4">
-                            <p class="sf-light o-8">26 AUG 2024</p>
-                            <h4>Economic Ripple Effects: How the EV Rentals Industry Boosts Local Economies?</h4>
-                           <a href="#" class="text-white sf-light o-8">Read More <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="white"><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z" fill="white"></path></svg></a>
-                        </div>
-                    </div>
-                    </div>
-                 </div>
-                  </div>
-                  <div class="swiper-slide"  data-aos="fade-up"   data-aos-duration="1400">
-                    <div class="col-12">
-                        <div class="position-relative w-100">
-                        <img src="https://media.essilorluxottica.com/cms/caas/v1/media/204504/data/picture/3bdf9d36f3ac11bddf56b073a7648868.png" alt="" class="w-100 h-100">
-                        <div class="position-absolute bottom-0 text-white text bg-blur w-100 text-start">
-                            <div class="bg-blur bg-black-3  w-100 h-100  py-4 px-4">
-                            <p class="sf-light o-8">26 AUG 2024</p>
-                            <h4>eBikeGo To Scale Up E-Two-Wheeler Fleet To One Lakh Units By FY26</h4>
-                           <a href="#" class="text-white sf-light o-8">Read More <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="white"><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z" fill="white"></path></svg></a>
-                        </div>
-                    </div>
-                    </div>
-                 </div>
-                  </div>
-                  <div class="swiper-slide"  data-aos="fade-up"   data-aos-duration="1500">
-                    <div class="col-12">
-                        <div class="position-relative w-100">
-                        <img src="https://media.essilorluxottica.com/cms/caas/v1/media/204504/data/picture/3bdf9d36f3ac11bddf56b073a7648868.png" alt="" class="w-100 h-100">
-                        <div class="position-absolute bottom-0 text-white text bg-blur w-100 text-start">
-                            <div class="bg-blur bg-black-3  w-100 h-100  py-4 px-4">
-                            <p class="sf-light o-8">26 AUG 2024</p>
-                            <h4>eBikeGo unveils the Muvi 125 5G scooter<br/><br/></h4>
-                           <a href="#" class="text-white sf-light o-8">Read More <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="white"><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z" fill="white"></path></svg></a>
-                        </div>
-                    </div>
-                    </div>
-                 </div>
-                  </div>
-                  <div class="swiper-slide"  data-aos="fade-up"   data-aos-duration="1400">
-                    <div class="col-12">
-                        <div class="position-relative w-100">
-                        <img src="https://media.essilorluxottica.com/cms/caas/v1/media/204504/data/picture/3bdf9d36f3ac11bddf56b073a7648868.png" alt="" class="w-100 h-100">
-                        <div class="position-absolute bottom-0 text-white text bg-blur w-100 text-start">
-                            <div class="bg-blur bg-black-3  w-100 h-100  py-4 px-4">
-                            <p class="sf-light o-8">26 AUG 2024</p>
-                            <h4>WHILL India ties up with Ashish Vidyarthi as Brand Ambassador to promote India's ..</h4>
-                           <a href="#" class="text-white sf-light o-8">Read More <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="white"><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z" fill="white"></path></svg></a>
-                        </div>
-                    </div>
-                    </div>
-                 </div>
-                  </div>
-                  
-                  
-                </div>
-                <div class="swiper-button-prev">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="15.768" height="13.479" viewBox="0 0 15.768 13.479" class="Icon__SVG-sc-fa06b592-0 jkLJmU" style="width: 31.5px; height: auto;"><path id="i_arrow-left" d="M19.768,11.728a.586.586,0,0,1-.6.563H5.916l4.922,5.273a.545.545,0,0,1-.422.914.473.473,0,0,1-.422-.176L4.158,12.115a.51.51,0,0,1,0-.738L9.994,5.189a.563.563,0,0,1,.809-.035.524.524,0,0,1,.035.774L5.916,11.166H19.17a.611.611,0,0,1,.6.562Z" transform="translate(-4 -5)"></path></svg>
-                  </div>
-                  <div class="swiper-button-next">
-                    <svg fill="black" xmlns="http://www.w3.org/2000/svg" width="15.768" height="13.479" viewBox="0 0 15.768 13.479" class="Icon__SVG-sc-fa06b592-0 fSWvFY" style="width: 31.5px; height: auto;"><path id="i_arrow-right" d="M19.768,11.728a.586.586,0,0,1-.6.563H5.916l4.922,5.273a.545.545,0,0,1-.422.914.473.473,0,0,1-.422-.176L4.158,12.115a.51.51,0,0,1,0-.738L9.994,5.189a.563.563,0,0,1,.809-.035.524.524,0,0,1,.035.774L5.916,11.166H19.17a.611.611,0,0,1,.6.562Z" transform="translate(-4 -5)" fill="black"></path></svg>
-                  </div>
-                </div>
-           
-           
     </section> -->
 
-    <section class="container-fluid press p-top p-left" data-aos="fade-up">
-        <div class="row d-flex flex-row justify-content-between align-items-center">
-           
-                <div class="col-lg-3 col-12"><h2>Press Releases</h2></div>
-                <div class="col-lg-9 col-12">
-                  
-                        <div class="swiper pressswiper">
-                            <div class="swiper-wrapper py-5">
-                              <div class="swiper-slide">
-                                <div class="col-12 text-start">
-                                <p class="f-16 fw-300 sf-light"> 26 AUG 2024</p>
-                                <h5 class="mt-n4"> eBikeGo gears up expansion plans for 2W rental business with 100,000+ Electric Vehicles, by next fiscal year</h5>
-                               <a href="#" class="text-black f-16 sf-light">Read More <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 jkLJmU"><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z"></path></svg></a>
-                                </div>
-                              </div>
-                              <div class="swiper-slide">
-                                <div class="col-12 text-start">
-                                <p class="f-16 fw-300 sf-light"> 26 AUG 2024</p>
-                                <h5 class="mt-n4"> eBikeGo gears up expansion plans for 2W rental business with 100,000+ Electric Vehicles, by next fiscal year</h5>
-                               <a href="#" class="text-black f-16 sf-light">Read More <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 jkLJmU"><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z"></path></svg></a>
-                                </div>
-                              </div>
-                              <div class="swiper-slide">
-                                <div class="col-12 text-start">
-                                <p class="f-16 fw-300 sf-light"> 26 AUG 2024</p>
-                                <h5 class="mt-n4"> eBikeGo gears up expansion plans for 2W rental business with 100,000+ Electric Vehicles, by next fiscal year</h5>
-                               <a href="#" class="text-black f-16 sf-light">Read More <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 jkLJmU"><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z"></path></svg></a>
-                                </div>
-                              </div>
-                              <!-- <div class="swiper-slide">
-                                <div class="col-12 text-start">
-                                <p class="f-16 fw-300 sf-light"> 26 AUG 2024</p>
-                                <h5 class="mt-n4">Promoting Children’s Clear Vision for a Successful Back-To-School Season</h5>
-                               <a href="#" class="text-black f-16 sf-light">Read More <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 jkLJmU"><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z"></path></svg></a>
-                                </div>
-                              </div>
-                              <div class="swiper-slide">
-                                <div class="col-12 text-start">
-                                <p class="f-16 fw-300 sf-light"> 26 AUG 2024</p>
-                                <h5 class="mt-n4">Promoting Children’s Clear Vision for a Successful Back-To-School Season</h5>
-                               <a href="#" class="text-black f-16 sf-light">Read More <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 jkLJmU"><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z"></path></svg></a>
-                                </div>
-                              </div> -->
-                              
-                            
-                            </div>
-                            
-                            <div class="presspagination position-absolute">
-                                <div class="swiper-button-prev">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="15.768" height="13.479" viewBox="0 0 15.768 13.479" class="Icon__SVG-sc-fa06b592-0 jkLJmU" style="width: 31.5px; height: auto;"><path id="i_arrow-left" d="M19.768,11.728a.586.586,0,0,1-.6.563H5.916l4.922,5.273a.545.545,0,0,1-.422.914.473.473,0,0,1-.422-.176L4.158,12.115a.51.51,0,0,1,0-.738L9.994,5.189a.563.563,0,0,1,.809-.035.524.524,0,0,1,.035.774L5.916,11.166H19.17a.611.611,0,0,1,.6.562Z" transform="translate(-4 -5)"></path></svg>
-                                  </div>
-                              <div class="swiper-button-next">
-                                <svg fill="black" xmlns="http://www.w3.org/2000/svg" width="15.768" height="13.479" viewBox="0 0 15.768 13.479" class="Icon__SVG-sc-fa06b592-0 fSWvFY" style="width: 31.5px; height: auto;"><path id="i_arrow-right" d="M19.768,11.728a.586.586,0,0,1-.6.563H5.916l4.922,5.273a.545.545,0,0,1-.422.914.473.473,0,0,1-.422-.176L4.158,12.115a.51.51,0,0,1,0-.738L9.994,5.189a.563.563,0,0,1,.809-.035.524.524,0,0,1,.035.774L5.916,11.166H19.17a.611.611,0,0,1,.6.562Z" transform="translate(-4 -5)" fill="black"></path></svg>
-                              </div>
-                              
-                            
-                        </div>
-                          </div>
-                        
-                   
-                
-            </div>
-               <!-- <p class="col-lg-3 col-lg-2-5 col-12 text-lg-end text-start"><a href="contact.html"class="b-btn">Contact Us today<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 idQZgM" ><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z"></path></svg> </a> -->
-
-               </p>
-            
+  <section id="who-we-are" class="grad-blue p-top p-bottom container-fluid bg-light">
+    <div class="row">
+      <div class="text-center mb-5">
+        <h2 class="text-white"  data-aos="fade-up">Who We Are</h2>
+      </div>
+    <div class="swiper who-we-are-swiper">
+      <div class="swiper-wrapper text-white">
+        <div class="swiper-slide">
+          <div class="d-flex flex-column gap-4">
+          <img src="images/wearevisionnaty.png">
+          <div class="position-relative">
+          <p class="sf-light big-p pb-4">We are a visionary conglomerate driving innovation across diverse industries.</p>
         </div>
+        </div>
+        </div>
+        <div class="swiper-slide ">
+          <div class="d-flex flex-column gap-4">
+            <img src="images/wearecommitte.png">
+            <div class="position-relative">
+          <p class="sf-light big-p pb-4">We are committed to transforming sectors with cutting-edge solutions and sustainable practices.</p>
+              </div>
+        </div>
+        </div>
+        <div class="swiper-slide">
+          <div class=" d-flex flex-column gap-4">
+          <img src="images/webringtogether.png">
+          <div class="position-relative">
+
+          <p class="sf-light big-p pb-4">We bring together some of the most impactful brands that redefine standards and set new benchmarks.</p>
+            </div>
+            </div>
+        </div>
+        <div class="swiper-slide ">
+          <div class="d-flex flex-column gap-4">
+          <img src="images/wearededicated.png">
+          <div class="position-relative">
+          <p class="sf-light big-p pb-4">We are dedicated to improving lives and safeguarding the planet.</p>
+            </div>
+            </div>
+        </div>
+        
+      </div>
+      <div class="d-lg-block d-md-block d-none">
+        <div class="swiper-button-prev">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15.768" height="13.479" viewBox="0 0 15.768 13.479" class="Icon__SVG-sc-fa06b592-0 jkLJmU" style="width: 31.5px; height: auto;"><path id="i_arrow-left" d="M19.768,11.728a.586.586,0,0,1-.6.563H5.916l4.922,5.273a.545.545,0,0,1-.422.914.473.473,0,0,1-.422-.176L4.158,12.115a.51.51,0,0,1,0-.738L9.994,5.189a.563.563,0,0,1,.809-.035.524.524,0,0,1,.035.774L5.916,11.166H19.17a.611.611,0,0,1,.6.562Z" transform="translate(-4 -5)"></path></svg>
+        </div>
+        <div class="swiper-button-next">
+          <svg fill="black" xmlns="http://www.w3.org/2000/svg" width="15.768" height="13.479" viewBox="0 0 15.768 13.479" class="Icon__SVG-sc-fa06b592-0 fSWvFY" style="width: 31.5px; height: auto;"><path id="i_arrow-right" d="M19.768,11.728a.586.586,0,0,1-.6.563H5.916l4.922,5.273a.545.545,0,0,1-.422.914.473.473,0,0,1-.422-.176L4.158,12.115a.51.51,0,0,1,0-.738L9.994,5.189a.563.563,0,0,1,.809-.035.524.524,0,0,1,.035.774L5.916,11.166H19.17a.611.611,0,0,1,.6.562Z" transform="translate(-4 -5)" fill="black"></path></svg>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      
+    </div>
+    </div>
+  </section>
+    
+    
+
+
+
+    
+
+      <!-- <section class="container-fluid p-top p-left">
+          <h2 >Stories</h2>
+          <div class="d-flex flex-lg-row flex-column justify-content-between">
+          <p class="w-lg-60 py-3  sf-light">Every day, at eBikeGo, we explore new paths to revolutionize urban mobility and empower sustainable travel. Discover our journey towards a cleaner, greener future through our stories.</p>
+          <a href="#" class="text-black  sf-light f-16 pb-4">View all stories <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="white"><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z" fill="black"></path></svg></a></div>
+
+
+          <div class="row story-slider">
+              <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"  data-aos="fade-up"   data-aos-duration="500">
+                      <div class="col-12">
+                          <div class="position-relative w-100">
+                          <img src="https://media.essilorluxottica.com/cms/caas/v1/media/204504/data/picture/3bdf9d36f3ac11bddf56b073a7648868.png" alt="" class="w-100 h-100">
+                          <div class="position-absolute bottom-0 text-white text bg-blur w-100 text-start">
+                              <div class="bg-blur bg-black-3  w-100 h-100  py-4 px-4">
+                              <p class="sf-light o-8">26 AUG 2024</p>
+                              <h4>Ashish Vidyarthi Joins forces with WHILL to transform India’s personal mobility ...</h4>
+                            <a href="#" class="text-white sf-light o-8">Read More <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="white"><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z" fill="white"></path></svg></a>
+                          </div>
+                      </div>
+                      </div>
+                  </div>
+                    </div>
+                    <div class="swiper-slide"  data-aos="fade-up"   data-aos-duration="900">
+                      <div class="col-12">
+                          <div class="position-relative w-100">
+                          <img src="https://media.essilorluxottica.com/cms/caas/v1/media/204504/data/picture/3bdf9d36f3ac11bddf56b073a7648868.png" alt="" class="w-100 h-100">
+                          <div class="position-absolute bottom-0 text-white text bg-blur w-100 text-start">
+                              <div class="bg-blur bg-black-3  w-100 h-100  py-4 px-4">
+                              <p class="sf-light o-8">26 AUG 2024</p>
+                              <h4>eBikeGo Welcomes Union Budget 2024: Driving India Towards a Sustainable EV Future</h4>
+                            <a href="#" class="text-white sf-light o-8">Read More <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="white"><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z" fill="white"></path></svg></a>
+                          </div>
+                      </div>
+                      </div>
+                  </div>
+                    </div>
+                    <div class="swiper-slide"  data-aos="fade-up"   data-aos-duration="1200">
+                      <div class="col-12">
+                          <div class="position-relative w-100">
+                          <img src="https://media.essilorluxottica.com/cms/caas/v1/media/204504/data/picture/3bdf9d36f3ac11bddf56b073a7648868.png" alt="" class="w-100 h-100">
+                          <div class="position-absolute bottom-0 text-white text bg-blur w-100 text-start">
+                              <div class="bg-blur bg-black-3  w-100 h-100  py-4 px-4">
+                              <p class="sf-light o-8">26 AUG 2024</p>
+                              <h4>Economic Ripple Effects: How the EV Rentals Industry Boosts Local Economies?</h4>
+                            <a href="#" class="text-white sf-light o-8">Read More <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="white"><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z" fill="white"></path></svg></a>
+                          </div>
+                      </div>
+                      </div>
+                  </div>
+                    </div>
+                    <div class="swiper-slide"  data-aos="fade-up"   data-aos-duration="1400">
+                      <div class="col-12">
+                          <div class="position-relative w-100">
+                          <img src="https://media.essilorluxottica.com/cms/caas/v1/media/204504/data/picture/3bdf9d36f3ac11bddf56b073a7648868.png" alt="" class="w-100 h-100">
+                          <div class="position-absolute bottom-0 text-white text bg-blur w-100 text-start">
+                              <div class="bg-blur bg-black-3  w-100 h-100  py-4 px-4">
+                              <p class="sf-light o-8">26 AUG 2024</p>
+                              <h4>eBikeGo To Scale Up E-Two-Wheeler Fleet To One Lakh Units By FY26</h4>
+                            <a href="#" class="text-white sf-light o-8">Read More <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="white"><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z" fill="white"></path></svg></a>
+                          </div>
+                      </div>
+                      </div>
+                  </div>
+                    </div>
+                    <div class="swiper-slide"  data-aos="fade-up"   data-aos-duration="1500">
+                      <div class="col-12">
+                          <div class="position-relative w-100">
+                          <img src="https://media.essilorluxottica.com/cms/caas/v1/media/204504/data/picture/3bdf9d36f3ac11bddf56b073a7648868.png" alt="" class="w-100 h-100">
+                          <div class="position-absolute bottom-0 text-white text bg-blur w-100 text-start">
+                              <div class="bg-blur bg-black-3  w-100 h-100  py-4 px-4">
+                              <p class="sf-light o-8">26 AUG 2024</p>
+                              <h4>eBikeGo unveils the Muvi 125 5G scooter<br/><br/></h4>
+                            <a href="#" class="text-white sf-light o-8">Read More <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="white"><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z" fill="white"></path></svg></a>
+                          </div>
+                      </div>
+                      </div>
+                  </div>
+                    </div>
+                    <div class="swiper-slide"  data-aos="fade-up"   data-aos-duration="1400">
+                      <div class="col-12">
+                          <div class="position-relative w-100">
+                          <img src="https://media.essilorluxottica.com/cms/caas/v1/media/204504/data/picture/3bdf9d36f3ac11bddf56b073a7648868.png" alt="" class="w-100 h-100">
+                          <div class="position-absolute bottom-0 text-white text bg-blur w-100 text-start">
+                              <div class="bg-blur bg-black-3  w-100 h-100  py-4 px-4">
+                              <p class="sf-light o-8">26 AUG 2024</p>
+                              <h4>WHILL India ties up with Ashish Vidyarthi as Brand Ambassador to promote India's ..</h4>
+                            <a href="#" class="text-white sf-light o-8">Read More <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="white"><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z" fill="white"></path></svg></a>
+                          </div>
+                      </div>
+                      </div>
+                  </div>
+                    </div>
+                    
+                    
+                  </div>
+                  <div class="swiper-button-prev">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15.768" height="13.479" viewBox="0 0 15.768 13.479" class="Icon__SVG-sc-fa06b592-0 jkLJmU" style="width: 31.5px; height: auto;"><path id="i_arrow-left" d="M19.768,11.728a.586.586,0,0,1-.6.563H5.916l4.922,5.273a.545.545,0,0,1-.422.914.473.473,0,0,1-.422-.176L4.158,12.115a.51.51,0,0,1,0-.738L9.994,5.189a.563.563,0,0,1,.809-.035.524.524,0,0,1,.035.774L5.916,11.166H19.17a.611.611,0,0,1,.6.562Z" transform="translate(-4 -5)"></path></svg>
+                    </div>
+                    <div class="swiper-button-next">
+                      <svg fill="black" xmlns="http://www.w3.org/2000/svg" width="15.768" height="13.479" viewBox="0 0 15.768 13.479" class="Icon__SVG-sc-fa06b592-0 fSWvFY" style="width: 31.5px; height: auto;"><path id="i_arrow-right" d="M19.768,11.728a.586.586,0,0,1-.6.563H5.916l4.922,5.273a.545.545,0,0,1-.422.914.473.473,0,0,1-.422-.176L4.158,12.115a.51.51,0,0,1,0-.738L9.994,5.189a.563.563,0,0,1,.809-.035.524.524,0,0,1,.035.774L5.916,11.166H19.17a.611.611,0,0,1,.6.562Z" transform="translate(-4 -5)" fill="black"></path></svg>
+                    </div>
+                  </div>
+            
+            
+      </section> -->
+
+      <section class="container-fluid press p-top p-left bg-light">
+          <div class="row d-flex flex-row justify-content-between align-items-center" data-aos="fade-up">
+            
+                  <div class="col-lg-3 col-12"><h2>Press Releases</h2></div>
+                  <div class="col-lg-9 col-12">
+                    
+                          <div class="swiper pressswiper">
+                              <div class="swiper-wrapper py-5">
+                                <div class="swiper-slide">
+                                  <div class="col-12 text-start">
+                                  <p class="f-16 fw-300 sf-light"> 26 AUG 2024</p>
+                                  <h5 class="mt-n4"> eBikeGo gears up expansion plans for 2W rental business with 100,000+ Electric Vehicles, by next fiscal year</h5>
+                                <a href="#" class="text-black f-16 sf-light">Read More <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 jkLJmU"><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z"></path></svg></a>
+                                  </div>
+                                </div>
+                                <div class="swiper-slide">
+                                  <div class="col-12 text-start">
+                                  <p class="f-16 fw-300 sf-light"> 26 AUG 2024</p>
+                                  <h5 class="mt-n4"> eBikeGo gears up expansion plans for 2W rental business with 100,000+ Electric Vehicles, by next fiscal year</h5>
+                                <a href="#" class="text-black f-16 sf-light">Read More <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 jkLJmU"><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z"></path></svg></a>
+                                  </div>
+                                </div>
+                                <div class="swiper-slide">
+                                  <div class="col-12 text-start">
+                                  <p class="f-16 fw-300 sf-light"> 26 AUG 2024</p>
+                                  <h5 class="mt-n4"> eBikeGo gears up expansion plans for 2W rental business with 100,000+ Electric Vehicles, by next fiscal year</h5>
+                                <a href="#" class="text-black f-16 sf-light">Read More <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 jkLJmU"><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z"></path></svg></a>
+                                  </div>
+                                </div>
+                                <!-- <div class="swiper-slide">
+                                  <div class="col-12 text-start">
+                                  <p class="f-16 fw-300 sf-light"> 26 AUG 2024</p>
+                                  <h5 class="mt-n4">Promoting Children’s Clear Vision for a Successful Back-To-School Season</h5>
+                                <a href="#" class="text-black f-16 sf-light">Read More <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 jkLJmU"><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z"></path></svg></a>
+                                  </div>
+                                </div>
+                                <div class="swiper-slide">
+                                  <div class="col-12 text-start">
+                                  <p class="f-16 fw-300 sf-light"> 26 AUG 2024</p>
+                                  <h5 class="mt-n4">Promoting Children’s Clear Vision for a Successful Back-To-School Season</h5>
+                                <a href="#" class="text-black f-16 sf-light">Read More <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 jkLJmU"><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z"></path></svg></a>
+                                  </div>
+                                </div> -->
+                                
+                              
+                              </div>
+                              
+                              <div class="presspagination position-absolute">
+                                  <div class="swiper-button-prev">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="15.768" height="13.479" viewBox="0 0 15.768 13.479" class="Icon__SVG-sc-fa06b592-0 jkLJmU" style="width: 31.5px; height: auto;"><path id="i_arrow-left" d="M19.768,11.728a.586.586,0,0,1-.6.563H5.916l4.922,5.273a.545.545,0,0,1-.422.914.473.473,0,0,1-.422-.176L4.158,12.115a.51.51,0,0,1,0-.738L9.994,5.189a.563.563,0,0,1,.809-.035.524.524,0,0,1,.035.774L5.916,11.166H19.17a.611.611,0,0,1,.6.562Z" transform="translate(-4 -5)"></path></svg>
+                                    </div>
+                                <div class="swiper-button-next">
+                                  <svg fill="black" xmlns="http://www.w3.org/2000/svg" width="15.768" height="13.479" viewBox="0 0 15.768 13.479" class="Icon__SVG-sc-fa06b592-0 fSWvFY" style="width: 31.5px; height: auto;"><path id="i_arrow-right" d="M19.768,11.728a.586.586,0,0,1-.6.563H5.916l4.922,5.273a.545.545,0,0,1-.422.914.473.473,0,0,1-.422-.176L4.158,12.115a.51.51,0,0,1,0-.738L9.994,5.189a.563.563,0,0,1,.809-.035.524.524,0,0,1,.035.774L5.916,11.166H19.17a.611.611,0,0,1,.6.562Z" transform="translate(-4 -5)" fill="black"></path></svg>
+                                </div>
+                                
+                              
+                          </div>
+                            </div>
+                          
+                    
+                  
+              </div>
+                <!-- <p class="col-lg-3 col-lg-2-5 col-12 text-lg-end text-start"><a href="contact.html"class="b-btn">Contact Us today<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 idQZgM" ><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z"></path></svg> </a> -->
+
+                </p>
+              
+          </div>
+        </section>
+
+      <section class="container-fluid mission p-top p-bottom bg-light">
+          <div class="row justify-content-between align-items-center">
+              <div class="col-lg-7 col-12 ">
+                  <div class="img-cont  d-flex gap-3">
+                  <!-- <div class="col-lg-4"> <img src="images/mission1.avif" alt="" class="w-100 "></div>
+                <div class="col-lg-8">  <img src="images/mission2.avif" alt="" class="w-100 h-100 br-100"></div> -->
+                <div class="col-lg-12 col-12">  <img src="images/mission.png" alt="" class="w-100"></div>
+            
+              </div>
+              </div>
+              <div class="col-lg-4 col-12 pt-3"  data-aos="fade-left">
+                  <h2>Mission</h2>
+                  <p class="big sf-light">At EBG Group, everything we do is fueled by our unwavering mission to “create impact and inspire change” every day.</p>
+                  <a href="who-we-are.html" class="text-black">Discover More <svg width="32" height="32" viewBox="0 0 32 32" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 jkLJmU" xmlns="http://www.w3.org/2000/svg"><path d="m20.034 16.737-6.75 7.5a.697.697 0 0 1-1.032.047.698.698 0 0 1-.047-1.032l6.282-7.031-6.282-6.984a.698.698 0 0 1 .047-1.032.697.697 0 0 1 1.031.047l6.75 7.453c.282.329.282.75 0 1.032z"></path></svg></a>
+              </div>
+          </div>
+      </section>
+      
+      <!-- hover section -->
+      <section class="container-fluid hover d-lg-block d-none animation1">
+        <div class="row p-0 sus ">
+
+          <div class="col-lg-6 col-12 sus1 text-white ">
+              <div class="sus-con d-flex flex-column justify-content-center text-center position-relative">
+              <div class="sus-head position-absolute">
+              <h2 class="fw-300">
+                  <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="white" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="white" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
+                  Sustainability  </h2>
+          </div>
+          <div class="sus-body position-absolute text-start">
+              <p>Creating value for our customers, communities, and the planet is at the core of our sustainability initiatives. Every action we take is designed to foster a better future for all.</p>
+          </div>
+              <div class="sus-btn position-absolute text-start">
+              <a href="who-we-are.html" class="t-btn">Discover More</a>
+              </div>
+        </div>
+      </div>
+          <div class="col-lg-6 col-12 sus2 sus1  text-white p-5">
+              <div class="sus-con d-flex flex-column justify-content-center text-center position-relative p-5">
+              <div class="sus-head position-absolute">
+              <h2 class="fw-300">
+                  <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="white" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="white" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
+                  Innovation  &nbsp; &nbsp;&nbsp; 
+    </h2>
+          </div>
+          <div class="sus-body position-absolute text-start">
+              <p>By pioneering new technologies and solutions, we empower our industries to evolve, continually driving progress and setting new standards</p>
+          </div>
+              <div class="sus-btn position-absolute text-start">
+            <a href="who-we-are.html" class="t-btn">Discover More</a>
+              </div>
+        </div>
+      </div>
+      
+      </div>
+
+
+
       </section>
 
-    <section class="container-fluid mission p-top p-bottom">
-        <div class="row justify-content-between align-items-center">
-            <div class="col-lg-7 col-12 ">
-                <div class="img-cont  d-flex gap-3">
-                <!-- <div class="col-lg-4"> <img src="images/mission1.avif" alt="" class="w-100 "></div>
-               <div class="col-lg-8">  <img src="images/mission2.avif" alt="" class="w-100 h-100 br-100"></div> -->
-               <div class="col-lg-12 col-12">  <img src="images/mission.png" alt="" class="w-100"></div>
-          
-            </div>
-            </div>
-            <div class="col-lg-4 col-12 pt-3"  data-aos="fade-left">
-                <h2>Mission</h2>
-                <p class="big sf-light">At EBG Group, everything we do is fueled by our unwavering mission to “create impact and inspire change” every day.</p>
-                <a href="who-we-are.html" class="text-black">Discover More <svg width="32" height="32" viewBox="0 0 32 32" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 jkLJmU" xmlns="http://www.w3.org/2000/svg"><path d="m20.034 16.737-6.75 7.5a.697.697 0 0 1-1.032.047.698.698 0 0 1-.047-1.032l6.282-7.031-6.282-6.984a.698.698 0 0 1 .047-1.032.697.697 0 0 1 1.031.047l6.75 7.453c.282.329.282.75 0 1.032z"></path></svg></a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- hover section -->
-    <section class="container-fluid hover d-lg-block d-none animation1">
-      <div class="row p-0 sus ">
 
-        <div class="col-lg-6 col-12 sus1 text-white ">
+
+
+        <!-- events -->
+        <section class="container  p-left mobhov d-lg-none d-block bg-light">
+          <div class="row justify-content-between">
+            <div class="col-12 d-lg-none d-block px-0">
+              <img src="images/sustainability.png" class="w-100" alt="">
+            </div>
+              <div class="col-lg-6 col-12 pt-4 px-4">
+                <h2 class="fw-300">
+                  <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="black" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="black"></circle></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="black" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="black"></circle></svg>
+                  Sustainability</h2>
+                  <p class="pb-2">Creating value for our customers, communities, and the planet is at the core of our sustainability initiatives. Every action we take is designed to foster a better future for all.</p>
+                  <a href="who-we-are.html"class="t-btn">Discover More <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 idQZgM" ><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z" ></path></svg> </a>
+              </div>
+              <div class="col-12 d-lg-none d-block pt-5 px-0">
+                <img src="images/innovation.png" class="w-100" alt="">
+              </div>
+              <div class="col-lg-6 col-12 py-5 pt-4 px-4">
+                <h2 class="fw-300">
+                  <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="black" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="black"></circle></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="black" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="black"></circle></svg>
+                  Innovation
+                </h2>
+                  <p class="pb-2">By pioneering new technologies and solutions, we empower our industries to evolve, continually driving progress and setting new standards.</p>
+                  <a href="who-we-are.html"class="t-btn">Discover More <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 idQZgM" ><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z" ></path></svg> </a>
+              </div>
+            
+          </div>
+      </section>  
+
+            <!-- double slider -->
+    <section class="container-fluid clients double-slider p-0">
+      <div class="container-1">
+      <!-- Swiper -->
+        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper-2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide swiper-slide-2">
+            <img src="images/doubleslider/coffee.png" class="d-lg-block d-none"/>
+            <img src="images/doubleslider/coffee-mob.jpg" class="d-lg-none d-block"/>
+            <a target="_blank" href="#"><button class="slide-button">AA Filter coffee</button></a>
+          </div>
+          <div class="swiper-slide swiper-slide-2">
+            <img src="images/doubleslider/ebikego.webp" />
+            <a target="_blank" href="https://acerelectric.in/"><button class="slide-button">Acer</button></a>
+          </div>
+          <div class="swiper-slide swiper-slide-2">
+            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+            <a target="_blank" href="#"><button class="slide-button">Daewoo</button></a>
+          </div>
+          <div class="swiper-slide swiper-slide-2">
+            <img src="images/doubleslider/ebg.png" />
+            <a target="_blank" href="#"><button class="slide-button">EBG</button></a> 
+          </div>
+          <div class="swiper-slide swiper-slide-2">
+            <img src="images/doubleslider/ebikegoimg.png" />
+            <a target="_blank" href="https://www.ebikego.com/"><button class="slide-button">Ebikego</button></a>
+          </div>
+          <div class="swiper-slide swiper-slide-2">
+            <img src="images//doubleslider/kustardimg.png" />
+            <a target="_blank" href="#"><button class="slide-button">kustard</button></a>
+          </div>
+          <div class="swiper-slide swiper-slide-2">
+            <img src="images//doubleslider/ayurveda.png" />
+            <a target="_blank" href="#"><button class="slide-button">Ayurveda</button></a>
+          </div>
+          <div class="swiper-slide swiper-slide-2">
+            <img src="images//doubleslider/selorganic.png" />
+            <a target="_blank" href="#"><button class="slide-button">Selorganic</button></a>
+          </div>
+          <div class="swiper-slide swiper-slide-2">
+            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+          </div>
+          <div class="swiper-slide swiper-slide-2">
+            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+          </div>
+        </div>
+        <div class="container">
+          <div>
+        <div thumbsSlider="" class="swiper swiper-2 pos-absolute">
+          <div class="col-lg-10 swiper-wrapper">
+            <div class="swiper-slide swiper-sub-slide-2">
+              <div class="slider-icons">
+                <div class="mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
+                </div>
+                <img src="images\logo1.png" alt="coffee" />
+              </div>
+            </div>
+            <div class="swiper-slide swiper-sub-slide-2">
+              <div class="slider-icons">
+                <div class="mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
+                </div>
+                <img src="images\logo2.png" alt="acerelectric" />
+              </div>
+            </div>
+            <div class="swiper-slide swiper-sub-slide-2">
+              <div class="slider-icons">
+                <div class="mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
+                </div>
+                <img src="images\logo3.png" alt="daewoo" />
+              </div>
+            </div>
+            <div class="swiper-slide swiper-sub-slide-2">
+              <div class="slider-icons">
+                <div class="mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
+                </div>
+                <img src="images/ebgwhite.png" alt="ebg" class="w-25" />
+              </div>
+            </div>
+            <div class="swiper-slide swiper-sub-slide-2">
+              <div class="slider-icons">
+                <div class="mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
+                </div>
+                <img src="images/doubleslider/ebikego.png" alt="ebikego" />
+              </div>
+            </div>
+            <div class="swiper-slide swiper-sub-slide-2">
+              <div class="slider-icons">
+                <div class="mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
+                </div>
+                <img src="images/doubleslider/kustard.png" alt="kustard" />
+              </div>
+            </div>
+            <div class="swiper-slide swiper-sub-slide-2">
+              <div class="slider-icons">
+                <div class="mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
+                </div>
+                <img src="images/logoplaceholder.png" alt="pravetka"/>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-sub-slide-2">
+              <div class="slider-icons">
+                <div class="mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
+                </div>
+                <img src="images/logoplaceholder.png" alt="selorganic"/>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-sub-slide-2">
+              <div class="slider-icons">
+                <div class="mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
+                </div>
+                <img src="images/logoplaceholder.png" alt="ebg"/>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-sub-slide-2">
+              <div class="slider-icons">
+                <div class="mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
+                </div>
+                <img src="images/logoplaceholder.png" alt="ebg"/>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="double-slider-pagination">
+              <div class="swiper-button-prev">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15.768" height="13.479" viewBox="0 0 15.768 13.479" class="Icon__SVG-sc-fa06b592-0 jkLJmU" style="width: 31.5px; height: auto;"><path id="i_arrow-left" d="M19.768,11.728a.586.586,0,0,1-.6.563H5.916l4.922,5.273a.545.545,0,0,1-.422.914.473.473,0,0,1-.422-.176L4.158,12.115a.51.51,0,0,1,0-.738L9.994,5.189a.563.563,0,0,1,.809-.035.524.524,0,0,1,.035.774L5.916,11.166H19.17a.611.611,0,0,1,.6.562Z" transform="translate(-4 -5)"></path></svg>
+              </div>
+              <div class="swiper-button-next">
+                <svg fill="black" xmlns="http://www.w3.org/2000/svg" width="15.768" height="13.479" viewBox="0 0 15.768 13.479" class="Icon__SVG-sc-fa06b592-0 fSWvFY" style="width: 31.5px; height: auto;"><path id="i_arrow-right" d="M19.768,11.728a.586.586,0,0,1-.6.563H5.916l4.922,5.273a.545.545,0,0,1-.422.914.473.473,0,0,1-.422-.176L4.158,12.115a.51.51,0,0,1,0-.738L9.994,5.189a.563.563,0,0,1,.809-.035.524.524,0,0,1,.035.774L5.916,11.166H19.17a.611.611,0,0,1,.6.562Z" transform="translate(-4 -5)"></path></svg>
+              </div>
+      </div>
+      </div>
+        </div>
+      </div>
+  </div>
+    </div>
+  </div>
+    </section>
+
+
+      <!-- cta -->
+      <section class="container-fluid bg-black cta p-top p-bottom" >
+          <div class="container" data-aos="fade-up">
+          <div class="row align-items-center gap-4">
+              <div class="col-lg-7 col-12">
+                <p class="big-p text-white sf-light m-0"> Our portfolio includes some of the most loved and most trusted vision care and eyewear brands in the world.</p>
+              </div>
+              <div class="col-lg-4 col-12">
+                  <a href="brands.html" class="b-btn w-fitcontent big-p">Explore our diverse portfolio</a>
+              </div>
+          </div>
+          </div>
+      </section>
+        
+  <!-- hover 2 -->
+  <section class="container-fluid  hover hover-2 d-lg-block d-none">
+    <div class="row p-0 sus">
+
+        <div class="col-lg-6 col-12 sus1 text-white">
             <div class="sus-con d-flex flex-column justify-content-center text-center position-relative">
             <div class="sus-head position-absolute">
             <h2 class="fw-300">
                 <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="white" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="white" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
-                Sustainability  </h2>
+                History &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;</h2>
         </div>
         <div class="sus-body position-absolute text-start">
-            <p>Creating value for our customers, communities, and the planet is at the core of our sustainability initiatives. Every action we take is designed to foster a better future for all.</p>
+            <p >EBG Group is the culmination of visionary leadership and groundbreaking innovations that have transformed industries and set new benchmarks for excellence.
+            </p>
         </div>
             <div class="sus-btn position-absolute text-start">
             <a href="who-we-are.html" class="t-btn">Discover More</a>
             </div>
-       </div>
+      </div>
     </div>
         <div class="col-lg-6 col-12 sus2 sus1  text-white p-5">
             <div class="sus-con d-flex flex-column justify-content-center text-center position-relative p-5">
@@ -436,767 +687,529 @@
             <h2 class="fw-300">
                 <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="white" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="white" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
-                Innovation  &nbsp; &nbsp;&nbsp; 
+                Global&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
   </h2>
         </div>
         <div class="sus-body position-absolute text-start">
-            <p>By pioneering new technologies and solutions, we empower our industries to evolve, continually driving progress and setting new standards</p>
+            <p >Our global presence spans diverse markets, with strategically positioned facilities, robust distribution networks, and a dynamic team driving.
+            </p>
         </div>
             <div class="sus-btn position-absolute text-start">
-           <a href="who-we-are.html" class="t-btn">Discover More</a>
+          <a href="brands.html" class="t-btn">Discover More</a>
             </div>
-       </div>
+      </div>
     </div>
     
     </div>
 
-
-
-    </section>
-
-
-
-
-       <!-- events -->
-       <section class="container  p-left mobhov d-lg-none d-block">
-        <div class="row justify-content-between">
-          <div class="col-12 d-lg-none d-block px-0">
-            <img src="images/sustainability.png" class="w-100" alt="">
-          </div>
-            <div class="col-lg-6 col-12 pt-4 px-4">
-              <h2 class="fw-300">
-                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="black" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="black"></circle></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="black" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="black"></circle></svg>
-                Sustainability</h2>
-                <p class="pb-2">Creating value for our customers, communities, and the planet is at the core of our sustainability initiatives. Every action we take is designed to foster a better future for all.</p>
-                <a href="who-we-are.html"class="t-btn">Discover More <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 idQZgM" ><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z" ></path></svg> </a>
-            </div>
-            <div class="col-12 d-lg-none d-block pt-5 px-0">
-              <img src="images/innovation.png" class="w-100" alt="">
-            </div>
-            <div class="col-lg-6 col-12 py-5 pt-4 px-4">
-              <h2 class="fw-300">
-                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="black" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="black"></circle></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="black" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="black"></circle></svg>
-                 Innovation
-              </h2>
-                <p class="pb-2">By pioneering new technologies and solutions, we empower our industries to evolve, continually driving progress and setting new standards.</p>
-                <a href="who-we-are.html"class="t-btn">Discover More <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 idQZgM" ><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z" ></path></svg> </a>
-            </div>
-           
-        </div>
-    </section>  
-
-          <!-- double slider -->
-  <section class="container-fluid clients double-slider p-0">
-    <div class="container-1">
-    <!-- Swiper -->
-      <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper-2">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide swiper-slide-2">
-          <img src="images/doubleslider/coffee.png" />
-          <a target="_blank" href="#"><button class="slide-button">AA Filter coffee</button></a>
-        </div>
-        <div class="swiper-slide swiper-slide-2">
-          <img src="images/doubleslider/ebikego.webp" />
-          <a target="_blank" href="#"><button class="slide-button">Acer</button></a>
-        </div>
-        <div class="swiper-slide swiper-slide-2">
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-          <a target="_blank" href="#"><button class="slide-button">Daewoo</button></a>
-        </div>
-        <div class="swiper-slide swiper-slide-2">
-          <img src="images/doubleslider/ebg.png" />
-          <a target="_blank" href="#"><button class="slide-button">EBG</button></a> 
-        </div>
-        <div class="swiper-slide swiper-slide-2">
-          <img src="images/doubleslider/ebikegoimg.png" />
-          <a target="_blank" href="#"><button class="slide-button">Ebikego</button></a>
-        </div>
-        <div class="swiper-slide swiper-slide-2">
-          <img src="images//doubleslider/kustardimg.png" />
-          <a target="_blank" href="#"><button class="slide-button">kustard</button></a>
-        </div>
-        <div class="swiper-slide swiper-slide-2">
-          <img src="images//doubleslider/ayurveda.png" />
-          <a target="_blank" href="#"><button class="slide-button">Ayurveda</button></a>
-        </div>
-        <div class="swiper-slide swiper-slide-2">
-          <img src="images//doubleslider/selorganic.png" />
-          <a target="_blank" href="#"><button class="slide-button">Selorganic</button></a>
-        </div>
-        <div class="swiper-slide swiper-slide-2">
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </div>
-        <div class="swiper-slide swiper-slide-2">
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </div>
-      </div>
-      <div class="container">
-        <div>
-      <div thumbsSlider="" class="swiper swiper-2 pos-absolute">
-        <div class="col-lg-10 swiper-wrapper">
-          <div class="swiper-slide swiper-sub-slide-2">
-            <div class="slider-icons">
-              <div class="mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
-              </div>
-              <img src="images\logo1.png" alt="coffee" />
-            </div>
-          </div>
-          <div class="swiper-slide swiper-sub-slide-2">
-            <div class="slider-icons">
-              <div class="mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
-              </div>
-              <img src="images\logo2.png" alt="acerelectric" />
-            </div>
-          </div>
-          <div class="swiper-slide swiper-sub-slide-2">
-            <div class="slider-icons">
-              <div class="mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
-              </div>
-              <img src="images\logo3.png" alt="daewoo" />
-            </div>
-          </div>
-          <div class="swiper-slide swiper-sub-slide-2">
-            <div class="slider-icons">
-              <div class="mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
-              </div>
-              <img src="images/ebgwhite.png" alt="ebg" class="w-25" />
-            </div>
-          </div>
-          <div class="swiper-slide swiper-sub-slide-2">
-            <div class="slider-icons">
-              <div class="mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
-              </div>
-              <img src="images/doubleslider/ebikego.png" alt="ebikego" />
-            </div>
-          </div>
-          <div class="swiper-slide swiper-sub-slide-2">
-            <div class="slider-icons">
-              <div class="mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
-              </div>
-              <img src="images/doubleslider/kustard.png" alt="kustard" />
-            </div>
-          </div>
-          <div class="swiper-slide swiper-sub-slide-2">
-            <div class="slider-icons">
-              <div class="mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
-              </div>
-              <img src="images/logoplaceholder.png" alt="pravetka"/>
-            </div>
-          </div>
-          <div class="swiper-slide swiper-sub-slide-2">
-            <div class="slider-icons">
-              <div class="mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM icon-svg" fill="white" style="width: 10px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
-              </div>
-              <img src="images/logoplaceholder.png" alt="selorganic"/>
-            </div>
-          </div>
-          <div class="swiper-slide swiper-sub-slide-2">
-            <img src="images/logoplaceholder.png" alt="ebg"/>
-          </div>
-          <div class="swiper-slide swiper-sub-slide-2">
-            <img src="images/logoplaceholder.png" alt="ebg"/>
-          </div>
-        </div>
-        <div class="col-lg-2">
-          <div class="double-slider-pagination">
-            <div class="swiper-button-prev">
-              <svg xmlns="http://www.w3.org/2000/svg" width="15.768" height="13.479" viewBox="0 0 15.768 13.479" class="Icon__SVG-sc-fa06b592-0 jkLJmU" style="width: 31.5px; height: auto;"><path id="i_arrow-left" d="M19.768,11.728a.586.586,0,0,1-.6.563H5.916l4.922,5.273a.545.545,0,0,1-.422.914.473.473,0,0,1-.422-.176L4.158,12.115a.51.51,0,0,1,0-.738L9.994,5.189a.563.563,0,0,1,.809-.035.524.524,0,0,1,.035.774L5.916,11.166H19.17a.611.611,0,0,1,.6.562Z" transform="translate(-4 -5)"></path></svg>
-            </div>
-            <div class="swiper-button-next">
-              <svg fill="black" xmlns="http://www.w3.org/2000/svg" width="15.768" height="13.479" viewBox="0 0 15.768 13.479" class="Icon__SVG-sc-fa06b592-0 fSWvFY" style="width: 31.5px; height: auto;"><path id="i_arrow-right" d="M19.768,11.728a.586.586,0,0,1-.6.563H5.916l4.922,5.273a.545.545,0,0,1-.422.914.473.473,0,0,1-.422-.176L4.158,12.115a.51.51,0,0,1,0-.738L9.994,5.189a.563.563,0,0,1,.809-.035.524.524,0,0,1,.035.774L5.916,11.166H19.17a.611.611,0,0,1,.6.562Z" transform="translate(-4 -5)"></path></svg>
-            </div>
-    </div>
-    </div>
-      </div>
-    </div>
-</div>
-  </div>
-</div>
   </section>
 
-
-    <!-- cta -->
-     <section class="container-fluid bg-black cta p-top p-bottom" >
-        <div class="container" data-aos="fade-up">
-        <div class="row align-items-center gap-4">
-            <div class="col-lg-7 col-12">
-               <p class="big-p text-white sf-light m-0"> Our portfolio includes some of the most loved and most trusted vision care and eyewear brands in the world.</p>
-            </div>
-            <div class="col-lg-4 col-12">
-                <a href="brands.html" class="b-btn w-fitcontent big-p">Explore our diverse portfolio</a>
-            </div>
+    <!-- events -->
+    <section class="container  p-left mobhov d-lg-none d-block px-0 bg-light">
+      <div class="row justify-content-between">
+        <div class="col-12 d-lg-none d-block">
+          <img src="images/ourhistory.jpg" class="w-100" alt="">
         </div>
-        </div>
-     </section>
-      
-<!-- hover 2 -->
-<section class="container-fluid  hover hover-2 d-lg-block d-none">
-  <div class="row p-0 sus">
-
-      <div class="col-lg-6 col-12 sus1 text-white">
-          <div class="sus-con d-flex flex-column justify-content-center text-center position-relative">
-          <div class="sus-head position-absolute">
-          <h2 class="fw-300">
-              <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="white" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="white" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
-              History &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;</h2>
-      </div>
-      <div class="sus-body position-absolute text-start">
-          <p >EBG Group is the culmination of visionary leadership and groundbreaking innovations that have transformed industries and set new benchmarks for excellence.
-          </p>
-      </div>
-          <div class="sus-btn position-absolute text-start">
-          <a href="who-we-are.html" class="t-btn">Discover More</a>
+          <div class="col-lg-6 col-12 pt-4 px-4">
+            <h2 class="fw-300">
+              <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="black" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="black"></circle></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="black" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="black"></circle></svg>
+              History</h2>
+              <p class="pb-2">EBG Group is the culmination of visionary leadership and groundbreaking innovations that have transformed industries and set new benchmarks for excellence.</p>
+              <a href="who-we-are.html"class="t-btn">Discover More <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 idQZgM" ><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z" ></path></svg> </a>
           </div>
-     </div>
-  </div>
-      <div class="col-lg-6 col-12 sus2 sus1  text-white p-5">
-          <div class="sus-con d-flex flex-column justify-content-center text-center position-relative p-5">
-          <div class="sus-head position-absolute">
-          <h2 class="fw-300">
-              <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="white" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="white" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="white"></circle></svg>
-              Global&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-</h2>
-      </div>
-      <div class="sus-body position-absolute text-start">
-          <p >Our global presence spans diverse markets, with strategically positioned facilities, robust distribution networks, and a dynamic team driving.
-          </p>
-      </div>
-          <div class="sus-btn position-absolute text-start">
-         <a href="brands.html" class="t-btn">Discover More</a>
+          <div class="col-12 d-lg-none d-block pt-5 px-0">
+            <img src="images/global.png" class="w-100" alt="">
           </div>
-     </div>
-  </div>
-  
-  </div>
-
-</section>
-
-   <!-- events -->
-   <section class="container  p-left mobhov d-lg-none d-block px-0">
-    <div class="row justify-content-between">
-      <div class="col-12 d-lg-none d-block">
-        <img src="images/ourhistory.jpg" class="w-100" alt="">
+          <div class="col-lg-6 col-12 py-5 pt-4 px-4">
+            <h2 class="fw-300">
+              <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="black" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="black"></circle></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="black" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="black"></circle></svg>
+              Global
+            </h2>
+              <p class="pb-2">Our global presence spans diverse markets, with strategically positioned facilities, robust distribution networks, and a dynamic team driving.</p>
+              <a href="brands.html"class="t-btn">Discover More <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 idQZgM" ><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z" ></path></svg> </a>
+          </div>
+        
       </div>
-        <div class="col-lg-6 col-12 pt-4 px-4">
-          <h2 class="fw-300">
-            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="black" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="black"></circle></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="black" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="black"></circle></svg>
-            History</h2>
-            <p class="pb-2">EBG Group is the culmination of visionary leadership and groundbreaking innovations that have transformed industries and set new benchmarks for excellence.</p>
-            <a href="who-we-are.html"class="t-btn">Discover More <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 idQZgM" ><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z" ></path></svg> </a>
-        </div>
-        <div class="col-12 d-lg-none d-block pt-5 px-0">
-          <img src="images/global.png" class="w-100" alt="">
-        </div>
-        <div class="col-lg-6 col-12 py-5 pt-4 px-4">
-          <h2 class="fw-300">
-            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="black" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="black"></circle></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="Icon__SVG-sc-fa06b592-0 idQZgM" fill="black" style="width: 17px; height: auto;"><circle id="Ellipse_1" data-name="Ellipse 1" cx="25" cy="25" r="25" fill="black"></circle></svg>
-            Global
-          </h2>
-            <p class="pb-2">Our global presence spans diverse markets, with strategically positioned facilities, robust distribution networks, and a dynamic team driving.</p>
-            <a href="brands.html"class="t-btn">Discover More <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 idQZgM" ><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z" ></path></svg> </a>
-        </div>
-       
-    </div>
-</section>  
+  </section>  
 
 
 
 
-     <!-- verticals -->
-      <section class="container-fluid verticals">
-        <div class="row">
-            <div class="swiper verticalswiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-        
-                        <div class="col-12 box  p-0">
-                            <div class="container">
-                            <div class="text-box text-white text-start">
-                            
-                                <h3 class="d-flex align-items-center gap-3">350+ <span class="big-p">Employees</span></h3>
-                                
-                            
-                            </div>
-                        
-                        </div>
-                 </div>
+      <!-- verticals -->
+        <section class="container-fluid verticals">
+          <div class="row">
+              <div class="swiper verticalswiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+          
+                          <div class="col-12 box  p-0">
+                              <div class="container">
+                              <div class="text-box text-white text-start">
+                              
+                                  <h3 class="d-flex align-items-center gap-3">350+ <span class="big-p">Employees</span></h3>
+                                  
+                              
+                              </div>
+                          
+                          </div>
                   </div>
-                  <div class="swiper-slide">
-        
-                        <div class="col-12 box  p-0">
-                
-                            <div class="text-box text-white text-start">
-                                
-                                <h3 class="d-flex align-items-center gap-3">5 <span class="big-p"> Countries</span></h3>
-                                
-                            </div>
-                            
-                    
-                 </div>
-                  </div>
-                  <div class="swiper-slide">
-        
-                        <div class="col-12 box  p-0">
-                
-                            <div class="text-box text-white text-start">
-                                <h3 class="d-flex align-items-center gap-3">40+ <span class="big-p">Stores</span></h3>
-                               
-                            </div>
-                            
-                        
-                 </div>
-                  </div>
-                  <div class="swiper-slide">
-        
-                        
-            <div class="col-12 box  p-0">
-                
-                <div class="text-box text-white text-start">
-                    <h3 class="d-flex align-items-center gap-3">4 <span class="big-p">Production Facilities across India</span></h3>
-                    
-                </div>
-                
-            </div>
-                 </div> 
-            
-                </div>
-                <div class="verticals-pagination">
-                <div class="swiper-button-prev">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="15.768" height="13.479" viewBox="0 0 15.768 13.479" class="Icon__SVG-sc-fa06b592-0 jkLJmU" style="width: 31.5px; height: auto;"><path id="i_arrow-left" d="M19.768,11.728a.586.586,0,0,1-.6.563H5.916l4.922,5.273a.545.545,0,0,1-.422.914.473.473,0,0,1-.422-.176L4.158,12.115a.51.51,0,0,1,0-.738L9.994,5.189a.563.563,0,0,1,.809-.035.524.524,0,0,1,.035.774L5.916,11.166H19.17a.611.611,0,0,1,.6.562Z" transform="translate(-4 -5)"></path></svg>
-                  </div>
-                  <div class="swiper-button-next">
-                    <svg fill="black" xmlns="http://www.w3.org/2000/svg" width="15.768" height="13.479" viewBox="0 0 15.768 13.479" class="Icon__SVG-sc-fa06b592-0 fSWvFY" style="width: 31.5px; height: auto;"><path id="i_arrow-right" d="M19.768,11.728a.586.586,0,0,1-.6.563H5.916l4.922,5.273a.545.545,0,0,1-.422.914.473.473,0,0,1-.422-.176L4.158,12.115a.51.51,0,0,1,0-.738L9.994,5.189a.563.563,0,0,1,.809-.035.524.524,0,0,1,.035.774L5.916,11.166H19.17a.611.611,0,0,1,.6.562Z" transform="translate(-4 -5)" fill="black"></path></svg>
-                  </div>
-                </div>
-                </div>
-            
-           
-           
-        </div>
-      </section>
-
-
-    <!-- bib cta section -->
-     <div class="container-fluid big-cta p-0">
-        <div class="row d-flex align-content-center text-center justify-content-center">
-        <h1 class=" pb-5 col-lg-10 col-11 text-white">Embrace our vision.<br/> Join us in shaping the future across industries. </h1>
-        <p><a href="careers.html" class="t-btn">Visit our Careers page<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 idQZgM"><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z"></path></svg></a></p>
-    </div>
-     </div>
-
-     <!-- events -->
-        <section class="container events p-left">
-            <div class="row justify-content-between">
-                <div class="col-lg-5 col-12 py-5">
-                    <h4>Partner with Us</h4>
-                    
-                        <p class="pb-3 o-7">Join us in driving innovation and shaping a sustainable future.
-                            Explore investment opportunities with EBG Group and be part of our global impact.
-                            </p>
-                            <a href="investors.html"class="b-btn">Visit our Investors Page <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 idQZgM" ><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z" ></path></svg> </a>
-                   
-                </div>
-                <div class="col-lg-5 col-12 py-5">
-                    <h4>Get in Touch</h4>
-                    
-                        <p class="pb-3 o-7">Connect with us for any inquiries or <br/>more information.
-                            </p>
-                            <a href="contact.html#c-form"class="b-btn">Contact Us today<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 idQZgM" ><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z"></path></svg> </a>
-                   
-                </div>
-            </div>
-        </section>      
-
-
-
-        <footer class="bg-black pt-4 p-left p-right">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-6 col-12 pb-4">
-                        <img src="images/ebgwhite.png" alt="" width="100px" height="auto">
                     </div>
-                    <div class="col-lg-6 col-12 pb-4">
-                        <div class="d-flex justify-content-lg-end justify-content-start gap-3 text-white">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-                              </svg>
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
-                                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
-                              </svg>
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
-                              </svg>
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
-                              </svg>
-                        </div>
+                    <div class="swiper-slide">
+          
+                          <div class="col-12 box  p-0">
+                  
+                              <div class="text-box text-white text-start">
+                                  
+                                  <h3 class="d-flex align-items-center gap-3">5 <span class="big-p"> Countries</span></h3>
+                                  
+                              </div>
+                              
+                      
+                  </div>
                     </div>
-                </div>
-                <div class="row">
-                    <ul class="d-flex flex-lg-row flex-column gap-3 text-white list-style-none">
-                        <li><a href="who-we-are.html">Who we are</a></li>
-                        <li><a href="brands.html">Brands</a></li>
-                        <li><a href="governance.html">Governance</a></li>
-                        <li><a href="careers.html">Careers</a></li>
-                        <li><a href="investors.html">Investors</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="row border-top pt-3">
-                   <p>© Ebikego Group 2024</p>
-                </div>
-            </div>
-        </footer>
+                    <div class="swiper-slide">
+          
+                          <div class="col-12 box  p-0">
+                  
+                              <div class="text-box text-white text-start">
+                                  <h3 class="d-flex align-items-center gap-3">40+ <span class="big-p">Stores</span></h3>
+                                
+                              </div>
+                              
+                          
+                  </div>
+                    </div>
+                    <div class="swiper-slide">
+          
+                          
+              <div class="col-12 box  p-0">
+                  
+                  <div class="text-box text-white text-start">
+                      <h3 class="d-flex align-items-center gap-3">4 <span class="big-p">Production Facilities across India</span></h3>
+                      
+                  </div>
+                  
+              </div>
+                  </div> 
+              
+                  </div>
+                  <div class="verticals-pagination">
+                  <div class="swiper-button-prev">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="15.768" height="13.479" viewBox="0 0 15.768 13.479" class="Icon__SVG-sc-fa06b592-0 jkLJmU" style="width: 31.5px; height: auto;"><path id="i_arrow-left" d="M19.768,11.728a.586.586,0,0,1-.6.563H5.916l4.922,5.273a.545.545,0,0,1-.422.914.473.473,0,0,1-.422-.176L4.158,12.115a.51.51,0,0,1,0-.738L9.994,5.189a.563.563,0,0,1,.809-.035.524.524,0,0,1,.035.774L5.916,11.166H19.17a.611.611,0,0,1,.6.562Z" transform="translate(-4 -5)"></path></svg>
+                    </div>
+                    <div class="swiper-button-next">
+                      <svg fill="black" xmlns="http://www.w3.org/2000/svg" width="15.768" height="13.479" viewBox="0 0 15.768 13.479" class="Icon__SVG-sc-fa06b592-0 fSWvFY" style="width: 31.5px; height: auto;"><path id="i_arrow-right" d="M19.768,11.728a.586.586,0,0,1-.6.563H5.916l4.922,5.273a.545.545,0,0,1-.422.914.473.473,0,0,1-.422-.176L4.158,12.115a.51.51,0,0,1,0-.738L9.994,5.189a.563.563,0,0,1,.809-.035.524.524,0,0,1,.035.774L5.916,11.166H19.17a.611.611,0,0,1,.6.562Z" transform="translate(-4 -5)" fill="black"></path></svg>
+                    </div>
+                  </div>
+                  </div>
+              
+            
+            
+          </div>
+        </section>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <!-- bib cta section -->
+      <div class="container-fluid big-cta p-0">
+          <div class="row d-flex align-content-center text-center justify-content-center">
+          <h1 class=" pb-5 col-lg-10 col-11 text-white">Embrace our vision.<br/> Join us in shaping the future across industries. </h1>
+          <p><a href="careers.html" class="t-btn">Visit our Careers page<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 idQZgM"><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z"></path></svg></a></p>
+      </div>
+      </div>
 
- <script>
-    var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1.15,
-        spaceBetween: 20,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      breakpoints: {
-        640: {
-          slidesPerView: 2,
+      <!-- events -->
+          <section class="container events p-left bg-light">
+              <div class="row justify-content-between">
+                  <div class="col-lg-5 col-12 py-5">
+                      <h4>Partner with Us</h4>
+                      
+                          <p class="pb-3 o-7">Join us in driving innovation and shaping a sustainable future.
+                              Explore investment opportunities with EBG Group and be part of our global impact.
+                              </p>
+                              <a href="investors.html"class="b-btn">Visit our Investors Page <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 idQZgM" ><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z" ></path></svg> </a>
+                    
+                  </div>
+                  <div class="col-lg-5 col-12 py-5">
+                      <h4>Get in Touch</h4>
+                      
+                          <p class="pb-3 o-7">Connect with us for any inquiries or <br/>more information.
+                              </p>
+                              <a href="contact.html#c-form"class="b-btn">Contact Us today<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 idQZgM" ><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z"></path></svg> </a>
+                    
+                  </div>
+              </div>
+          </section>      
+
+
+
+          <footer class="bg-black pt-4 p-left p-right">
+              <div class="container-fluid">
+                  <div class="row">
+                      <div class="col-lg-6 col-12 pb-4">
+                          <img src="images/ebgwhite.png" alt="" width="100px" height="auto">
+                      </div>
+                      <div class="col-lg-6 col-12 pb-4">
+                          <div class="d-flex justify-content-lg-end justify-content-start gap-3 text-white">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                  <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                                </svg>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <ul class="d-flex flex-lg-row flex-column gap-3 text-white list-style-none">
+                          <li><a href="who-we-are.html">Who we are</a></li>
+                          <li><a href="brands.html">Brands</a></li>
+                          <li><a href="governance.html">Governance</a></li>
+                          <li><a href="careers.html">Careers</a></li>
+                          <li><a href="investors.html">Investors</a></li>
+                          <li><a href="contact.html">Contact Us</a></li>
+                      </ul>
+                  </div>
+                  <div class="row border-top pt-3">
+                    <p>© Ebikego Group 2024</p>
+                  </div>
+              </div>
+          </footer>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+      var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1.15,
           spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-        },
-        1024: {
-          slidesPerView: 3.25,
-          spaceBetween: 20,
-        },
-      },
-    });
-
-    var swiper = new Swiper(".verticalswiper", {
-        slidesPerView: 1,
-        spaceBetween: 0,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      breakpoints: {
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 0,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 0,
-        },
-        1024: {
-          slidesPerView: 4,
-          spaceBetween: 0,
-        },
-      },
-    });
-
-    var swiper = new Swiper(".pressswiper", {
-        slidesPerView: 1,
-        spaceBetween: 100,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-    var swiper = new Swiper(".who-we-are-swiper", {
-      slidesPerView: 1,
-      centeredSlides: true,
-        spaceBetween: 10,
-        loop:true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      breakpoints: {
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        1024: {
-          slidesPerView: 2.2,
-          spaceBetween: 20,
-        },
-      },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-
-    // aos
-    AOS.init();
-  </script>
-
-
-<!-- <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var swiper = new Swiper('.swiper-1', {
-        spaceBetween: 30,
-        loop: true,
-        centeredSlides: true,
-        pagination: {
-          el: '.swiper-1 .swiper-pagination',
-          clickable: true,
-        },
         navigation: {
-          nextEl: '.swiper-1 .swiper-button-next',
-          prevEl: '.swiper-1 .swiper-button-prev',
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
         breakpoints: {
-          // When window width is <= 768px
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
           768: {
-            slidesPerView: 1,
+            slidesPerView: 3,
+            spaceBetween: 20,
           },
-          // When window width is > 768px
-          769: {
-            slidesPerView: 1.5,
-          }
-        },
-        on: {
-          init: function () {
-            updateSlideStyles(this);
-            updateCaption(this);
-          },
-          slideChange: function () {
-            updateSlideStyles(this);
-            updateCaption(this);
-          },
-          slideChangeTransitionEnd: function () {
-            updateSlideStyles(this);
+          1024: {
+            slidesPerView: 3.25,
+            spaceBetween: 20,
           },
         },
       });
-    
-      function updateSlideStyles(swiper) {
-        const slides = swiper.slides;
-        slides.forEach((slide) => {
-          slide.classList.remove('swiper-slide-active-1', 'swiper-slide-prev-1', 'swiper-slide-next-1');
-        });
-    
-        // Add appropriate classes to slides
-        const activeSlide = swiper.slides[swiper.activeIndex];
-        const prevSlide = swiper.slides[swiper.activeIndex - 1] || swiper.slides[swiper.slides.length - 1];
-        const nextSlide = swiper.slides[swiper.activeIndex + 1] || swiper.slides[0];
-    
-        activeSlide.classList.add('swiper-slide-active-1');
-        prevSlide.classList.add('swiper-slide-prev-1-1');
-        nextSlide.classList.add('swiper-slide-next-1');
-      }
-    
-      function updateCaption(swiper) {
-        var activeSlide = swiper.slides[swiper.activeIndex];
-        var captionText = activeSlide.getAttribute('data-caption');
-        var captionElement = document.getElementById('slider-caption');
-    
-        if (captionElement) {
-          captionElement.classList.remove('visible');
-          setTimeout(function () {
-            captionElement.textContent = captionText;
-            captionElement.classList.add('visible');
-          }, 300); 
-        }
-      }
-    });
-    
-  </script> -->
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".swiper-2", {
-        loop: true,
-        spaceBetween: 10,
-        slidesPerView: 3,
-        freeMode: true,
-        watchSlidesProgress: true,
-        breakpoints: {
-        768: {
-          slidesPerView: 4,
-          spaceBetween: 21,
-        },
-        1024: {
-          slidesPerView: 6,
-          spaceBetween: 10,
-        },
-      },
-      });
-      var swiper_2 = new Swiper(".mySwiper-2", {
-        loop: true,
-        spaceBetween: 0,
+
+      var swiper = new Swiper(".verticalswiper", {
+          slidesPerView: 1,
+          spaceBetween: 0,
         navigation: {
-          nextEl: ".mySwiper-2 .swiper-button-next",
-          prevEl: ".mySwiper-2 .swiper-button-prev",
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
-        thumbs: {
-          swiper: swiper,
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 0,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 0,
+          },
         },
       });
+
+      var swiper = new Swiper(".pressswiper", {
+          slidesPerView: 1,
+          spaceBetween: 100,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+      var swiper = new Swiper(".who-we-are-swiper", {
+        slidesPerView: 1,
+        centeredSlides: true,
+          spaceBetween: 10,
+          loop:true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 2.2,
+            spaceBetween: 20,
+          },
+        },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+
+      // aos
+      AOS.init();
     </script>
-  
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Carousel functionality
-    let currentIndex = 0;
-    const slides = document.querySelectorAll('.slide');
-    const buttons = document.querySelectorAll('.carousel-button');
 
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.style.transform = `translateX(-${index * 300}px)`;
-        buttons[i].classList.toggle('active', i === index);
+  <!-- <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var swiper = new Swiper('.swiper-1', {
+          spaceBetween: 30,
+          loop: true,
+          centeredSlides: true,
+          pagination: {
+            el: '.swiper-1 .swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-1 .swiper-button-next',
+            prevEl: '.swiper-1 .swiper-button-prev',
+          },
+          breakpoints: {
+            // When window width is <= 768px
+            768: {
+              slidesPerView: 1,
+            },
+            // When window width is > 768px
+            769: {
+              slidesPerView: 1.5,
+            }
+          },
+          on: {
+            init: function () {
+              updateSlideStyles(this);
+              updateCaption(this);
+            },
+            slideChange: function () {
+              updateSlideStyles(this);
+              updateCaption(this);
+            },
+            slideChangeTransitionEnd: function () {
+              updateSlideStyles(this);
+            },
+          },
+        });
+      
+        function updateSlideStyles(swiper) {
+          const slides = swiper.slides;
+          slides.forEach((slide) => {
+            slide.classList.remove('swiper-slide-active-1', 'swiper-slide-prev-1', 'swiper-slide-next-1');
+          });
+      
+          // Add appropriate classes to slides
+          const activeSlide = swiper.slides[swiper.activeIndex];
+          const prevSlide = swiper.slides[swiper.activeIndex - 1] || swiper.slides[swiper.slides.length - 1];
+          const nextSlide = swiper.slides[swiper.activeIndex + 1] || swiper.slides[0];
+      
+          activeSlide.classList.add('swiper-slide-active-1');
+          prevSlide.classList.add('swiper-slide-prev-1-1');
+          nextSlide.classList.add('swiper-slide-next-1');
+        }
+      
+        function updateCaption(swiper) {
+          var activeSlide = swiper.slides[swiper.activeIndex];
+          var captionText = activeSlide.getAttribute('data-caption');
+          var captionElement = document.getElementById('slider-caption');
+      
+          if (captionElement) {
+            captionElement.classList.remove('visible');
+            setTimeout(function () {
+              captionElement.textContent = captionText;
+              captionElement.classList.add('visible');
+            }, 300); 
+          }
+        }
       });
-    }
+      
+    </script> -->
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".swiper-2", {
+          loop: true,
+          spaceBetween: 10,
+          slidesPerView: 3,
+          freeMode: true,
+          watchSlidesProgress: true,
+          breakpoints: {
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 21,
+          },
+          1024: {
+            slidesPerView: 6,
+            spaceBetween: 10,
+          },
+        },
+        });
+        var swiper_2 = new Swiper(".mySwiper-2", {
+          loop: true,
+          spaceBetween: 0,
+          navigation: {
+            nextEl: ".mySwiper-2 .swiper-button-next",
+            prevEl: ".mySwiper-2 .swiper-button-prev",
+          },
+          thumbs: {
+            swiper: swiper,
+          },
+        });
+      </script>
+    
 
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % slides.length;
-      showSlide(currentIndex);
-    }
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Carousel functionality
+      let currentIndex = 0;
+      const slides = document.querySelectorAll('.slide');
+      const buttons = document.querySelectorAll('.carousel-button');
 
-    buttons.forEach((button, index) => {
-      button.addEventListener('click', () => {
-        currentIndex = index;
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.style.transform = `translateX(-${index * 300}px)`;
+          buttons[i].classList.toggle('active', i === index);
+        });
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
         showSlide(currentIndex);
-      });
-    });
-
-    setInterval(nextSlide, 3000); // Change slide every 3 seconds
-
-    // Initialize carousel
-    showSlide(currentIndex);
-
-    // Video play/pause buttons
-    const video = document.getElementById('videoElement');
-    const playButton = document.getElementById('playButton');
-    const pauseButton = document.getElementById('pauseButton');
-
-    function updateButtonVisibility() {
-      if (video.paused) {
-        playButton.style.display = 'block';
-        pauseButton.style.display = 'none';
-      } else {
-        playButton.style.display = 'none';
-        pauseButton.style.display = 'block';
       }
-    }
 
-    playButton.addEventListener('click', () => {
-      video.play();
-      updateButtonVisibility();
-    });
+      buttons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+          currentIndex = index;
+          showSlide(currentIndex);
+        });
+      });
 
-    pauseButton.addEventListener('click', () => {
-      video.pause();
-      updateButtonVisibility();
-    });
+      setInterval(nextSlide, 3000); // Change slide every 3 seconds
 
-    video.addEventListener('play', updateButtonVisibility);
-    video.addEventListener('pause', updateButtonVisibility);
+      // Initialize carousel
+      showSlide(currentIndex);
 
-    // Initialize button visibility based on video state
-    updateButtonVisibility();
+      // Video play/pause buttons
+      const video = document.getElementById('videoElement');
+      const playButton = document.getElementById('playButton');
+      const pauseButton = document.getElementById('pauseButton');
 
-    // Header, button styles, and toggler icon color on scroll
-    window.addEventListener('scroll', function() {
-      const header = document.querySelector('.fixed-head');
-      const button = document.querySelector('.btn');
-      const togglerIcon = document.querySelector('.navbar-toggler-icon');
-      const logos = {
-        default: document.querySelector('.logo-default'),
-        black: document.querySelector('.logo-black')
-      };
-
-      if (window.scrollY > 50) { // Change '50' to the scroll value you prefer
-        header.classList.add('scrolled');
-        button.classList.add('scrolled');
-        if (togglerIcon) {
-          togglerIcon.classList.add('scrolled');
-        }
-        if (logos.default) {
-          logos.default.style.display = 'none';
-        }
-        if (logos.black) {
-          logos.black.style.display = 'block';
-        }
-      } else {
-        header.classList.remove('scrolled');
-        button.classList.remove('scrolled');
-        if (togglerIcon) {
-          togglerIcon.classList.remove('scrolled');
-        }
-        if (logos.default) {
-          logos.default.style.display = 'block';
-        }
-        if (logos.black) {
-          logos.black.style.display = 'none';
+      function updateButtonVisibility() {
+        if (video.paused) {
+          playButton.style.display = 'block';
+          pauseButton.style.display = 'none';
+        } else {
+          playButton.style.display = 'none';
+          pauseButton.style.display = 'block';
         }
       }
-    });
-  });
-</script>
-<script>
-    $(document).ready(function() {
-      var videoPlayer = document.getElementById('youtubeVideo');
-      var originalSrc = videoPlayer.getAttribute('src');
-      $('#modelimg').on('shown.bs.modal', function() {
-        // Update src to autoplay the video with sound
-        videoPlayer.src = originalSrc + '&autoplay=1' + '&mute=0';
+
+      playButton.addEventListener('click', () => {
+        video.play();
+        updateButtonVisibility();
       });
-      $('#modelimg').on('hidden.bs.modal', function() {
-        // Reset src to stop autoplay and mute the sound
-        videoPlayer.src = originalSrc;
-        videoPlayer.muted = true;
+
+      pauseButton.addEventListener('click', () => {
+        video.pause();
+        updateButtonVisibility();
+      });
+
+      video.addEventListener('play', updateButtonVisibility);
+      video.addEventListener('pause', updateButtonVisibility);
+
+      // Initialize button visibility based on video state
+      updateButtonVisibility();
+
+      // Header, button styles, and toggler icon color on scroll
+      window.addEventListener('scroll', function() {
+        const header = document.querySelector('.fixed-head');
+        const button = document.querySelector('.btn');
+        const togglerIcon = document.querySelector('.navbar-toggler-icon');
+        const logos = {
+          default: document.querySelector('.logo-default'),
+          black: document.querySelector('.logo-black')
+        };
+
+        if (window.scrollY > 50) { // Change '50' to the scroll value you prefer
+          header.classList.add('scrolled');
+          button.classList.add('scrolled');
+          if (togglerIcon) {
+            togglerIcon.classList.add('scrolled');
+          }
+          if (logos.default) {
+            logos.default.style.display = 'none';
+          }
+          if (logos.black) {
+            logos.black.style.display = 'block';
+          }
+        } else {
+          header.classList.remove('scrolled');
+          button.classList.remove('scrolled');
+          if (togglerIcon) {
+            togglerIcon.classList.remove('scrolled');
+          }
+          if (logos.default) {
+            logos.default.style.display = 'block';
+          }
+          if (logos.black) {
+            logos.black.style.display = 'none';
+          }
+        }
       });
     });
   </script>
   <script>
-    // JavaScript for changing the header background on scroll
-  window.addEventListener('scroll', function() {
-    var header = document.querySelector('.fixed-head');
-    var navLinks = document.querySelectorAll('.nav-item a');
-  
-    if (window.scrollY > 50) { // Change '50' to the scroll value you prefer
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-  });
-  </script>
+      $(document).ready(function() {
+        var videoPlayer = document.getElementById('youtubeVideo');
+        var originalSrc = videoPlayer.getAttribute('src');
+        $('#modelimg').on('shown.bs.modal', function() {
+          // Update src to autoplay the video with sound
+          videoPlayer.src = originalSrc + '&autoplay=1' + '&mute=0';
+        });
+        $('#modelimg').on('hidden.bs.modal', function() {
+          // Reset src to stop autoplay and mute the sound
+          videoPlayer.src = originalSrc;
+          videoPlayer.muted = true;
+        });
+      });
+    </script>
+    <script>
+      // JavaScript for changing the header background on scroll
+    window.addEventListener('scroll', function() {
+      var header = document.querySelector('.fixed-head');
+      var navLinks = document.querySelectorAll('.nav-item a');
+    
+      if (window.scrollY > 50) { // Change '50' to the scroll value you prefer
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+    </script>
 
-</body>
-</html>
+  </body>
+  </html>

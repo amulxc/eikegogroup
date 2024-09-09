@@ -1181,11 +1181,11 @@ footer .border-top {
 }
 
 .swiper-wrapper .swiper-slide-thumb-active .icon-svg {
-  display: inline;
+  opacity: 1;
 }
 
 .swiper-slide .icon-svg {
-  display: none;
+  opacity: 0;
 }
 
 /*End of swiper 2 code*/

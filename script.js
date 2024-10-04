@@ -45,13 +45,3 @@
 
 
 
-  // scroll video 
-  // window.addEventListener("scroll", function () {
-  //   const yourElement = document.getElementById("#rental");
-  //   if (window.scrollY > 1600) {
-  //     yourElement.classList.add("scrolled");
-  //   } else {
-  //     yourElement.classList.remove("scrolled");
-  //   }
-  // });
-  

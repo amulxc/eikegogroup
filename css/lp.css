@@ -54,7 +54,7 @@
     text-align: left;
     & .position-absolute{
         transform: translate(-20px,-50%);
-        background-color: #fff;
+        /* background-color: #fff; */
     }
 }
 

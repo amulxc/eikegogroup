@@ -1,0 +1,47 @@
+.banner-form{
+    padding: 20px 0;
+    background: #000;
+    width: 100%;
+  }
+  .banner-form form{
+    display: flex;
+    justify-content: center;
+  }
+  .banner-form input, .banner-form select{
+    width: 100%;
+  }
+  .banner-form button{
+    text-align: center;
+  }
+  .banner-form .button-text{
+    display: flex;
+    justify-content: center;
+  }
+  .banner-form div{
+    padding: 0px 20px;
+    margin-bottom: 20px;
+  }
+  .banner-form input, .banner-form select{
+    padding: 6px;
+    border-radius:5px;
+    border:none;
+  }
+  .banner-form option {
+    color: #000 !important;
+  }
+  .banner-form .button-text button{
+    border: none;
+    padding: 10px 50px 12px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #000;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+    background: #fff;
+  }
+  .banner-form .button-text button:hover{
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+  }

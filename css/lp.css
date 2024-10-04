@@ -65,7 +65,7 @@
     height: calc((100% - 30px) / 2) !important;
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 10px;
     justify-content: center;
     align-items: center;
   }

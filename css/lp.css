@@ -79,10 +79,12 @@
     .left{
         top:200px;
         min-height: 150px;
+        left:20px;
     }
     .right{
         top: 300px;
         min-height: 660px;
+        left:15px;
     }
     #rental{
         height: 1000px;

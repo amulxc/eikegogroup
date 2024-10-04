@@ -1,6 +1,6 @@
 .banner-form{
     padding: 20px 0;
-    background: #000;
+    background: #ffffff87;
     width: 100%;
   }
   .banner-form form{
@@ -9,6 +9,7 @@
   }
   .banner-form input, .banner-form select{
     width: 100%;
+    border: 1px solid #000 !important;
   }
   .banner-form button{
     text-align: center;
@@ -28,6 +29,7 @@
   }
   .banner-form option {
     color: #000 !important;
+    border: 1px solid #000 !important;
   }
   .banner-form .button-text button{
     border: none;
@@ -39,6 +41,7 @@
     transition: .2s ease-in-out;
     cursor: pointer;
     background: #fff;
+    border: 1px solid #000 !important;
   }
   .banner-form .button-text button:hover{
     background: #000;

@@ -453,8 +453,8 @@ header {
 }
 @media (max-width: 767px) {
   .verticals .text-box {
-    bottom: 380px;
-    left: -180px !important;
+    bottom: 260px;
+    left: 0px !important;
   }
 }
 .verticals h3 {

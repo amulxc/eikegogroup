@@ -2,15 +2,17 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    padding-bottom: env(safe-area-inset-bottom); /* Adjust for iPhone safe area */
+    padding-bottom: 20px; /* Fallback for non-iOS devices */
     z-index: 9999;
+ /* Ensure enough space for content */
+    background-color: black; /* Ensure consistent background color */
 }
 
 @supports (-webkit-touch-callout: none) {
     .stickycta {
-        padding-bottom: calc(env(safe-area-inset-bottom) + 10px); /* Add extra padding for better UI on iOS */
+        padding-bottom: calc(env(safe-area-inset-bottom) + 20px); /* Ensure extra padding for iOS safe area */
     }
-}
+}z
 
 .banner-content{
     text-align: left;

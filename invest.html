@@ -80,7 +80,7 @@
         </div>
         <div class="modal-body text-center">
           <!-- Video Embed -->
-          <iframe id="youtubeVideo" width="100%" height="480" src="https://www.youtube.com/embed/wQ-e739kURM?si=ZwM4O2Remd7b7W6e&amp;" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <!-- <iframe id="youtubeVideo" width="100%" height="480" src="https://www.youtube.com/embed/wQ-e739kURM?si=ZwM4O2Remd7b7W6e&amp;" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
         </div>
       </div>
     </div>
@@ -1549,19 +1549,19 @@
   });
 </script>
 <script>
-    $(document).ready(function() {
-      var videoPlayer = document.getElementById('youtubeVideo');
-      var originalSrc = videoPlayer.getAttribute('src');
-      $('#modelimg').on('shown.bs.modal', function() {
-        // Update src to autoplay the video with sound
-        videoPlayer.src = originalSrc + '&autoplay=1' + '&mute=0';
-      });
-      $('#modelimg').on('hidden.bs.modal', function() {
-        // Reset src to stop autoplay and mute the sound
-        videoPlayer.src = originalSrc;
-        videoPlayer.muted = true;
-      });
-    });
+    // $(document).ready(function() {
+    //   var videoPlayer = document.getElementById('youtubeVideo');
+    //   var originalSrc = videoPlayer.getAttribute('src');
+    //   $('#modelimg').on('shown.bs.modal', function() {
+    //     // Update src to autoplay the video with sound
+    //     videoPlayer.src = originalSrc + '&autoplay=1' + '&mute=0';
+    //   });
+    //   $('#modelimg').on('hidden.bs.modal', function() {
+    //     // Reset src to stop autoplay and mute the sound
+    //     videoPlayer.src = originalSrc;
+    //     videoPlayer.muted = true;
+    //   });
+    // });
   </script>
   <script>
     // JavaScript for changing the header background on scroll

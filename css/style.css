@@ -122,6 +122,9 @@ p, a {
 }
 
 @media (max-width: 767px) {
+  h1 {
+    font-size: 2em;
+  }
   h2.big {
     font-size: 2em;
   }
@@ -933,6 +936,12 @@ footer .border-top {
 .mover-1 img:hover {
   filter: grayscale(0);
   transition: filter 0.5s ease-in-out;
+}
+@media (max-width: 767px) {
+  .mover-1 img {
+    width: 175px;
+    margin-right: 40px;
+  }
 }
 
 @keyframes moveSlideshow {

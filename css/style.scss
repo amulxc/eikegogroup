@@ -85,6 +85,7 @@ h1{font-family: 'SF Pro Light';letter-spacing: 2.5px;font-weight: bold;font-size
   }
   .big-p{font-size: 24px;}
   @media (max-width:767px) {
+    h1{font-size: 2em;}
     h2.big{font-size: 2.0em;}
     h2{font-size: 2em;}
     .big-p{font-size: 20px;}
@@ -653,6 +654,10 @@ img{
       filter: grayscale(0);
       transition: filter 0.5s ease-in-out;
     }
+    @media (max-width:767px) {
+      width: 175px;
+      margin-right: 40px;
+    }
     
   }
   
@@ -697,6 +702,7 @@ img{
       filter: brightness(0.8);
       &.scrolled{filter: brightness(0);}
     }
+    
   }
   #rental video {
     overflow: hidden;

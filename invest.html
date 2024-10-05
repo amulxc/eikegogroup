@@ -75,7 +75,7 @@
   
   
   <div id="rental" class="lphero">
-    <video id="videoElement" autoplay muted loop width="100%" height="100%" poster="images/wearededicated.webp">
+    <video id="videoElement" autoplay muted loop width="100%" height="100%" poster="images/wearededicated-d.webp">
       <source src="video/ebg.mp4" type="video/mp4" loading="lazy" >
     </video>
   
@@ -85,13 +85,6 @@
               <p class="text-white">Exclusive Investment Opportunity</p>
                 <h1 class="text-white pb-2" style="font-size: 34px;" >Invest in Global Innovation & Sustainability</h1>
                 <p class="text-white pb-2" >Join us in transforming the future with cutting-edge solutions across industries, from clean energy to healthcare and beyond offering both sustainability and impressive financial returns.</p>
-                <!-- <p class="text-white">Together, we charge towards a profitable and sustainable future.</p> -->
-            
-              </div>
-    
-              <div>
-                <img src="images/play.png" height="6%" id="playButton" style="position: absolute; bottom: 10px; right: 25px; cursor: pointer;">
-                <img src="images/pause.png" height="6%" id="pauseButton" style="position: absolute; bottom: 10px; right: 25px; cursor: pointer; display: none;">
               </div>
         </div>
         <div class="col-lg-5 col-12 right"  id="investnow">
@@ -110,7 +103,7 @@
                   
                   <div class="banner-form rounded-3">
                   <!--Name-->
-                  <h3 class="text-center">Partner with us</h3>
+                  <h3 class="text-center pb-2">Partner with us</h3>
                   <div>
                       <input type="text" maxlength="255" name="Name_First" fieldType=7 placeholder="First Name*" required/>
                   </div>
@@ -219,7 +212,7 @@
 <section class="bg-light">
     <div class="container-fluid p-top p-bottom">
     <div class="row align-items-center text-center pb-5">
-      <h2>Driving Innovation Across Industries</h2>
+      <h2 class="pb-2">Driving Innovation Across Industries</h2>
       <p>At EBG Group, we are committed to creating tangible value by leading the charge in some of the most impactful and fast-growing sectors worldwide. From revolutionizing personal mobility with cutting-edge electric vehicles to reshaping healthcare and sustainable manufacturing, we deliver solutions that not only solve today’s challenges but pave the way for a greener, smarter future.</p>
     </div>
       <!-- Swiper -->
@@ -1103,20 +1096,19 @@
 
       <!-- lp sec 8 -->
         <!-- cta -->
-     <div class="bg-black z-3">
-        <section class="container-fluid bg-black p-left position-fixed bottom-0 py-3 stickycta" >
-          
-          <div class="row align-items-center gap-4 justify-content-between">
-              <div class="col-lg-7 col-12">
-                <p class= "text-white sf-light m-0"> Invest in Sustainable Mobility for a Greener Future and Greater Returns.</p>
+        <div class="bg-black z-3">
+          <section class="container-fluid bg-black p-left position-fixed bottom-0 py-3 stickycta">
+              <div class="row align-items-center gap-4 justify-content-between">
+                  <div class="col-lg-7 col-12">
+                      <p class="text-white sf-light m-0">Invest in Sustainable Mobility for a Greener Future and Greater Returns.</p>
+                  </div>
+                  <div class="col-lg-4 col-12">
+                      <a href="#investnow" class="b-btn w-fitcontent f-16">Invest now</a>
+                  </div>
               </div>
-              <div class="col-lg-4 col-12">
-                  <a href="#investnow" class="b-btn w-fitcontent f-16">Invest now</a>
-              </div>
-        
-          </div>
-      </section>
-       </div>
+          </section>
+      </div>
+      
   
 
 
@@ -1467,35 +1459,35 @@
     showSlide(currentIndex);
 
     // Video play/pause buttons
-    const video = document.getElementById('videoElement');
-    const playButton = document.getElementById('playButton');
-    const pauseButton = document.getElementById('pauseButton');
+    // const video = document.getElementById('videoElement');
+    // const playButton = document.getElementById('playButton');
+    // const pauseButton = document.getElementById('pauseButton');
 
-    function updateButtonVisibility() {
-      if (video.paused) {
-        playButton.style.display = 'block';
-        pauseButton.style.display = 'none';
-      } else {
-        playButton.style.display = 'none';
-        pauseButton.style.display = 'block';
-      }
-    }
+    // function updateButtonVisibility() {
+    //   if (video.paused) {
+    //     playButton.style.display = 'block';
+    //     pauseButton.style.display = 'none';
+    //   } else {
+    //     playButton.style.display = 'none';
+    //     pauseButton.style.display = 'block';
+    //   }
+    // }
 
-    playButton.addEventListener('click', () => {
-      video.play();
-      updateButtonVisibility();
-    });
+    // playButton.addEventListener('click', () => {
+    //   video.play();
+    //   updateButtonVisibility();
+    // });
 
-    pauseButton.addEventListener('click', () => {
-      video.pause();
-      updateButtonVisibility();
-    });
+    // pauseButton.addEventListener('click', () => {
+    //   video.pause();
+    //   updateButtonVisibility();
+    // });
 
-    video.addEventListener('play', updateButtonVisibility);
-    video.addEventListener('pause', updateButtonVisibility);
+    // video.addEventListener('play', updateButtonVisibility);
+    // video.addEventListener('pause', updateButtonVisibility);
 
-    // Initialize button visibility based on video state
-    updateButtonVisibility();
+    // // Initialize button visibility based on video state
+    // updateButtonVisibility();
 
     // Header, button styles, and toggler icon color on scroll
     window.addEventListener('scroll', function() {

@@ -1,6 +1,17 @@
-.stickycta{
-    z-index: 999 !important;
+.stickycta {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: env(safe-area-inset-bottom); /* Adjust for iPhone safe area */
+    z-index: 9999;
 }
+
+@supports (-webkit-touch-callout: none) {
+    .stickycta {
+        padding-bottom: calc(env(safe-area-inset-bottom) + 10px); /* Add extra padding for better UI on iOS */
+    }
+}
+
 .banner-content{
     text-align: left;
     left: 5%;

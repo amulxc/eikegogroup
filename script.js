@@ -42,6 +42,18 @@
     });
     updateProgress();
   });
+  window.addEventListener('scroll', function() {
+    const videocolor = document.querySelector('#videoElement');
+    if (window.scrollY > 1200) { // Change '50' to the scroll value you prefer
+      videocolor.classList.add('scrolled');
+  
+        if (videocolor) {
+          videocolor.classList.add('scrolled');
+        }
+      } else {
+        videocolor.classList.remove('scrolled');
 
+      }}
+    );
 
 

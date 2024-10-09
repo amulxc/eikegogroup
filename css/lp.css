@@ -205,3 +205,11 @@
     }
     
     /* slider year end */
+
+    /* grid swiper */
+    .grid-swiper{
+    & .swiper-wrapper{padding-bottom: 40px;}
+    & .swiper-pagination{bottom: 0px;}
+    & .swiper-pagination-bullet{background-color: #000;}
+    
+}

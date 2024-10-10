@@ -1545,19 +1545,31 @@
     });
   });
 </script>
-
   <script>
-    // JavaScript for changing the header background on scroll
-  window.addEventListener('scroll', function() {
-    var header = document.querySelector('.fixed-head');
-    var navLinks = document.querySelectorAll('.nav-item a');
-  
-    if (window.scrollY > 50) { // Change '50' to the scroll value you prefer
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-  });
-  </script>
+    (function() {
+        function getQueryParams() {
+            var params = {};
+            var queryString = window.location.search.substring(1);
+            var regex = /([^&=]+)=([^&]*)/g;
+            var m;
+            while (m = regex.exec(queryString)) {
+                params[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
+            }
+            return params;
+        }
+
+        function populateUTMParams(params) {
+            var utmFields = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+            utmFields.forEach(function(field) {
+                if (params[field]) {
+                    document.querySelector('input[name="' + field + '"]').value = params[field];
+                }
+            });
+        }
+
+        var queryParams = getQueryParams();
+        populateUTMParams(queryParams);
+    })();
+</script>
 </body>
 </html>

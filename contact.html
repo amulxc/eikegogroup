@@ -133,28 +133,18 @@
   <!-- <h2>Ebikego Global website form</h2> -->
   <p></p>
   <!--Name-->
-  <input class="form-control" type="text" maxlength="255" name="Name_First" fieldType=7 placeholder="First&#x20;Name" />
+  <input class="form-control" type="text" maxlength="255" name="Name_First" fieldType=7 placeholder="First&#x20;Name" required/>
   <!-- <label>First Name</label> -->
-  <input class="form-control mt-4" type="text" maxlength="255" name="Name_Last" fieldType=7 placeholder="Last&#x20;Name" />
+  <input class="form-control mt-4" type="text" maxlength="255" name="Name_Last" fieldType=7 placeholder="Last&#x20;Name" required/>
   <!-- <label>Last Name</label> -->
   <!--Phone-->
-  <label> 
-  </label>
-  <div class="d-flex justify-content-between">
-    <div class="col-lg-2 col-3">
-  <input class="form-control " type="text" compname="PhoneNumber" name="PhoneNumber_countrycode" phoneFormat="1" isCountryCodeEnabled=true maxlength="20" value="" fieldType=11 id="international_PhoneNumber_countrycode" placeholder="Country Code" />
-</div>
-<div class="col-lg-9 col-8">
-  
-  <input class="form-control col-7" type="text" compname="PhoneNumber_countrycodeval" name="PhoneNumber_countrycodeval" phoneFormat="1" maxlength="10"  id="international_PhoneNumber_countrycodeval" placeholder="Phone"/>
-</div>
-</div>
+  <input type="text" class="form-control col-7 mt-4" compname="PhoneNumber" name="PhoneNumber_countrycode" phoneFormat="1" isCountryCodeEnabled=false maxlength="20" value="" fieldType=11 id="international_PhoneNumber_countrycode" placeholder="Phone" />
   <!-- <label>Code</label> -->
   <!-- <label>Number</label> -->
   <!--Email-->
   <label> 
   </label>
-  <input class="form-control" type="text" maxlength="255" name="Email" value="" fieldType=9 placeholder="Email" />
+  <input class="form-control" type="text" maxlength="255" name="Email" value="" fieldType=9 placeholder="Email" required/>
   <!--Multi Line-->
   <label> 
   </label>

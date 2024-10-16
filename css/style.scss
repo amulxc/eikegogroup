@@ -1208,7 +1208,7 @@ img{
     background-size: cover;
     border-radius: 20px;
     box-shadow: none;
-    transition: transform .4s ease-in-out, left .4s ease-in-out, top .4s ease-in-out, width .4s ease-in-out, height .4s ease-in-out;
+    transition: transform 1s cubic-bezier(0,.62,.16,1), left 1s cubic-bezier(0,.62,.16,1), top 1s cubic-bezier(0,.62,.16,1), width 1s cubic-bezier(0,.62,.16,1), height 1s cubic-bezier(0,.62,.16,1);
     transform-origin: center center;
     @media (max-width:767px) {
       top: 66%;

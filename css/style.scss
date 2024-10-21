@@ -1255,7 +1255,7 @@ img{
     font: 400 0.85rem helvetica,sans-serif;
     color: white;
     text-shadow: 0 3px 8px rgba(0,0,0,0.5);
-    opacity: 0;
+    
     // display: none;
     @media (max-width:767px) {
       width: min(50vw,400px);
@@ -1268,6 +1268,8 @@ img{
       font-family: 'arial-black';
       text-transform: uppercase;
       font-family: var(--secondary);
+      opacity: 0;
+      animation-delay: .7s;
     }
   
     & .description {
@@ -1275,6 +1277,8 @@ img{
       padding: 1rem 0 1.5rem;
       font-size: 0.8rem;
       font-family: var(--secondary);
+      opacity: 0;
+      animation-delay: .9s;
     }
   
     & a {
@@ -1286,12 +1290,22 @@ img{
       padding: 0.75rem;
       cursor: pointer;
       font-family: var(--secondary);
+      opacity: 0;
+      animation-delay: .95s;
     }
   }
-  
-  .item:nth-of-type(2) .content {
+
+  li.item:nth-child(2) h2.title {
     display: block;
-    animation: show 0.45s ease-in-out 0.3s forwards;
+    animation: show 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
+  }
+  li.item:nth-child(2) .description {
+    display: block;
+    animation: show 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
+  }
+  li.item:nth-child(2) a {
+    display: block;
+    animation: show 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
   }
   
   @keyframes show {

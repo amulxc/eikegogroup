@@ -9,3 +9,4 @@ Allow: /css/
 
 # Sitemap
 Sitemap: https://theebg.com/sitemap.xml
+Sitemap: https://theebg.com/images-sitemap.xml

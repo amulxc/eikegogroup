@@ -1,0 +1,11 @@
+
+# Block access to URL parameters
+Disallow: /*?*
+
+# Allow bots to crawl public assets like JS libraries and CDN
+Allow: /cdn/
+Allow: /js/
+Allow: /css/
+
+# Sitemap
+Sitemap: https://theebg.com/sitemap.xml

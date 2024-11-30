@@ -1,0 +1,14 @@
+.blog-header{
+    height: 90vh;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/breadcrumb/governance.webp) center center / cover no-repeat fixed;
+    padding: 64px;
+}
+.socialmedia-links a{
+    color: #000;
+}
+@media only screen and (max-width: 600px) {
+    .blog-header{
+        height: 100vh;
+        padding: 10px;
+    }
+}

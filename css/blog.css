@@ -8,7 +8,7 @@
 }
 @media only screen and (max-width: 600px) {
     .blog-header{
-        height: 100vh;
-        padding: 10px;
+        height: auto;
+        padding: 50px 16px;
     }
 }

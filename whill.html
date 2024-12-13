@@ -196,7 +196,7 @@ h2{
          <p>WHILL’s cutting-edge designs and user-centric technology transform how people move, making every journey seamless and stylish. From urban explorers to individuals with mobility challenges, our products provide freedom, independence, and convenience for diverse needs, making WHILL one of the top choices for franchise business opportunities.
         </p>
 
-          <a href="#" class="text-dark big-p pb-5 openpopup">Discover <svg width="24" height="24" fill="#212529" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 jkLJmU"><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z"></path></svg></a>
+          <a href="#" class="text-dark big-p pb-5 openpopup">Partner With Us <svg width="24" height="24" fill="#212529" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 jkLJmU"><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z"></path></svg></a>
 
           <h2>Why Choose WHILL for Your Franchise?
           </h2>
@@ -237,7 +237,7 @@ h2{
           <h3>Opportunities for Growth
           </h3>
           <p>As WHILL continues to innovate, franchisees benefit from new product launches and market expansions, keeping your business ahead of the curve and ensuring sustained success in the world of franchise business opportunities.</p>
-          <a href="#" class="text-dark big-p pb-5 openpopup">Discover <svg width="24" height="24" fill="#212529" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 jkLJmU"><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z"></path></svg></a>
+          <a href="#" class="text-dark big-p pb-5 openpopup">Partner With Us <svg width="24" height="24" fill="#212529" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:auto" class="Icon__SVG-sc-fa06b592-0 jkLJmU"><path d="M15.54 11.29 9.88 5.64a1 1 0 1 0-1.42 1.41l4.95 5L8.46 17a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.3.999.999 0 0 0 .71-.3l5.66-5.65a1 1 0 0 0 0-1.47z"></path></svg></a>
 
           <h2>The Growing Demand for Personal Mobility
           </h2>
@@ -440,6 +440,24 @@ h2{
   });
 </script>
 
+<script language="javascript">
+  var iframe = document.getElementById('myiframe');
+      iframe.src = iframe.src + window.location.search;
+</script>
+
+<script>
+  // Function to add query parameters to the URL
+  function addQueryParameter(key, value) {
+      const url = new URL(window.location.href);
+      if (!url.searchParams.has(key)) { // Add only if the parameter doesn't exist
+          url.searchParams.set(key, value);
+          window.history.replaceState(null, "", url);
+      }
+  }
+
+  // Add formurl=acer to the URL
+  addQueryParameter("formurl", "whill");
+</script>
  
   </body>
 </html>

@@ -382,20 +382,29 @@ h2{
     <button class="close-popup">&times;</button>
     <h2>Discover Acer Electric</h2>
     <p>Join us in revolutionizing sustainable mobility. Fill out the form below to learn more about franchise opportunities.</p>
-    <form>
-      <div class="mb-3">
-        <input type="text" class="form-control" placeholder="Your Name" required>
-      </div>
-      <div class="mb-3">
-        <input type="email" class="form-control" placeholder="Your Email" required>
-      </div>
-      <div class="mb-3">
-        <input type="tel" class="form-control" placeholder="Your Phone" required>
-      </div>
-      <button type="submit" class="btn btn-dark">Submit</button>
-    </form>
+    <iframe id="myiframe" aria-label='EBG-BrandPage-form' frameborder="0" style="height:550px;width:99%;border:none;" src='https://forms.zohopublic.com/ebikego/form/EBGBrandPageform/formperma/mC2JTTrrb5ePsWe5-BiKPXBERd-tifLUARYtDqyfr7Y'></iframe>
   </div>
 </div>
+
+
+<script language="javascript">
+  var iframe = document.getElementById('myiframe');
+      iframe.src = iframe.src + window.location.search;
+</script>
+
+<script>
+  // Function to add query parameters to the URL
+  function addQueryParameter(key, value) {
+      const url = new URL(window.location.href);
+      if (!url.searchParams.has(key)) { // Add only if the parameter doesn't exist
+          url.searchParams.set(key, value);
+          window.history.replaceState(null, "", url);
+      }
+  }
+
+  // Add formurl=acer to the URL
+  addQueryParameter("formurl", "whill");
+</script>
 
 <script>
   // Get all "Discover" links
